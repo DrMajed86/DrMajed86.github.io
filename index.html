@@ -1,0 +1,3399 @@
+<!doctype html>
+<html lang="en" dir="ltr" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Dr. Majed N. Turkistani — Assistant Professor of Paleontology and Stratigraphy at King Abdulaziz University."
+    />
+    <title>Dr. Majed N. Turkistani | Paleontology & Stratigraphy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@400;500;600&family=Noto+Naskh+Arabic:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <style>
+      /* ─── Light Theme (default) ─── */
+      :root {
+        --primary: #00695c;
+        --primary-dark: #004d40;
+        --primary-deeper: #002e27;
+        --primary-light: #e0f2f1;
+        --primary-mid: #00897b;
+        --accent: #f9a825;
+        --accent-light: #fff8e1;
+        --text: #1a2332;
+        --text-muted: #5a6a7a;
+        --surface: #ffffff;
+        --bg: #f8fafa;
+        --border: #d0e4e1;
+        --hero-bg: linear-gradient(
+          145deg,
+          #002e27 0%,
+          #004d40 55%,
+          #00695c 100%
+        );
+        --hero-dot: rgba(255, 255, 255, 0.08);
+        --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.07);
+        --shadow-md: 0 4px 20px rgba(0, 0, 0, 0.1);
+        --shadow-lg: 0 8px 32px rgba(0, 105, 92, 0.14);
+        --radius: 10px;
+        --transition: 0.25s ease;
+        --header-bg: rgba(255, 255, 255, 0.96);
+        --section-alt-bg: #e0f2f1;
+        --section-dark-bg: #004d40;
+        --footer-bg: #002e27;
+      }
+      /* ─── Dark Theme ─── */
+      [data-theme="dark"] {
+        --primary: #4db6ac;
+        --primary-dark: #26a69a;
+        --primary-deeper: #00695c;
+        --primary-light: #1b3330;
+        --primary-mid: #80cbc4;
+        --accent: #ffca28;
+        --accent-light: #2b2000;
+        --text: #ddecea;
+        --text-muted: #7aada7;
+        --surface: #162523;
+        --bg: #0d1e1b;
+        --border: #2a4542;
+        --hero-bg: linear-gradient(
+          145deg,
+          #050f0d 0%,
+          #0b1f1c 55%,
+          #0f2e28 100%
+        );
+        --hero-dot: rgba(255, 255, 255, 0.04);
+        --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.35);
+        --shadow-md: 0 4px 20px rgba(0, 0, 0, 0.45);
+        --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.45);
+        --header-bg: rgba(13, 30, 27, 0.97);
+        --section-alt-bg: #111f1d;
+        --section-dark-bg: #091714;
+        --footer-bg: #060e0d;
+      }
+
+      /* ─── Base ─── */
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      html {
+        scroll-behavior: smooth;
+        font-size: 16px;
+      }
+      body {
+        font-family: "Inter", system-ui, sans-serif;
+        color: var(--text);
+        background: var(--bg);
+        line-height: 1.7;
+        -webkit-font-smoothing: antialiased;
+        transition:
+          background 0.3s,
+          color 0.3s;
+      }
+      [lang="ar"] body,
+      [lang="ar"] h1,
+      [lang="ar"] h2,
+      [lang="ar"] h3,
+      [lang="ar"] h4,
+      [lang="ar"] p,
+      [lang="ar"] span,
+      [lang="ar"] a,
+      [lang="ar"] button,
+      [lang="ar"] li {
+        font-family: "Noto Naskh Arabic", "Inter", system-ui, sans-serif;
+      }
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+      ul {
+        list-style: none;
+      }
+      img {
+        max-width: 100%;
+        display: block;
+      }
+
+      /* ─── Utility ─── */
+      .container {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 0 1.5rem;
+      }
+      .section {
+        padding: 5rem 0;
+      }
+      .section-alt {
+        background: var(--section-alt-bg);
+      }
+      .section-dark {
+        background: var(--section-dark-bg);
+        color: #fff;
+      }
+      .section-title {
+        font-family: "Playfair Display", Georgia, serif;
+        font-size: clamp(1.6rem, 3vw, 2.3rem);
+        font-weight: 700;
+        color: var(--primary-dark);
+        display: inline-block;
+      }
+      [data-theme="dark"] .section-title {
+        color: var(--primary);
+      }
+      .section-dark .section-title {
+        color: #fff;
+      }
+      .section-title::after {
+        content: "";
+        display: block;
+        width: 48px;
+        height: 3px;
+        background: var(--accent);
+        border-radius: 2px;
+        margin-top: 0.4rem;
+      }
+      [dir="rtl"] .section-title::after {
+        margin-right: 0;
+      }
+      .section-header {
+        margin-bottom: 2.5rem;
+      }
+      .section-header p {
+        color: var(--text-muted);
+        margin-top: 0.5rem;
+        font-size: 1rem;
+      }
+      .section-dark .section-header p {
+        color: rgba(255, 255, 255, 0.6);
+      }
+      .subsection-title {
+        font-family: "Playfair Display", Georgia, serif;
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: var(--primary-dark);
+        margin: 2.5rem 0 1.25rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+      [data-theme="dark"] .subsection-title {
+        color: var(--primary);
+      }
+      .subsection-title::before {
+        content: "";
+        display: inline-block;
+        width: 4px;
+        height: 1.1em;
+        background: var(--accent);
+        border-radius: 2px;
+        flex-shrink: 0;
+      }
+
+      /* ─── Reveal ─── */
+      .reveal {
+        opacity: 0;
+        transform: translateY(28px);
+        transition:
+          opacity 0.65s ease,
+          transform 0.65s ease;
+      }
+      .reveal.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .reveal {
+          opacity: 1;
+          transform: none;
+          transition: none;
+        }
+        * {
+          animation-duration: 0.01ms !important;
+          transition-duration: 0.01ms !important;
+        }
+      }
+
+      /* ═══ HEADER ═══ */
+      #site-header {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        background: var(--header-bg);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border-bottom: 2px solid var(--primary);
+        transition:
+          box-shadow var(--transition),
+          background 0.3s;
+      }
+      #site-header.scrolled {
+        box-shadow: 0 2px 20px rgba(0, 0, 0, 0.15);
+      }
+      .header-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 68px;
+        gap: 0.75rem;
+      }
+      .logo {
+        font-family: "Playfair Display", serif;
+        font-size: 1.4rem;
+        font-weight: 700;
+        color: var(--primary);
+        letter-spacing: 0.05em;
+        flex-shrink: 0;
+      }
+      #primary-nav ul {
+        display: flex;
+        gap: 0.15rem;
+        align-items: center;
+      }
+      #primary-nav a {
+        font-size: 0.82rem;
+        font-weight: 500;
+        color: var(--text-muted);
+        padding: 0.35rem 0.6rem;
+        border-radius: 6px;
+        transition:
+          color var(--transition),
+          background var(--transition);
+        position: relative;
+      }
+      #primary-nav a:hover {
+        color: var(--primary);
+        background: var(--primary-light);
+      }
+      #primary-nav a.active {
+        color: var(--primary);
+        font-weight: 600;
+      }
+      #primary-nav a.active::after {
+        content: "";
+        position: absolute;
+        bottom: -2px;
+        left: 0.6rem;
+        right: 0.6rem;
+        height: 2px;
+        background: var(--primary);
+        border-radius: 1px;
+      }
+      [dir="rtl"] #primary-nav a.active::after {
+        left: 0.6rem;
+        right: 0.6rem;
+      }
+
+      /* Header controls group */
+      .header-controls {
+        display: flex;
+        align-items: center;
+        gap: 0.4rem;
+        flex-shrink: 0;
+      }
+      .ctrl-btn {
+        background: none;
+        border: 1.5px solid var(--border);
+        color: var(--text-muted);
+        border-radius: 7px;
+        padding: 0.35rem 0.55rem;
+        cursor: pointer;
+        font-size: 0.78rem;
+        font-weight: 600;
+        letter-spacing: 0.04em;
+        transition:
+          color var(--transition),
+          border-color var(--transition),
+          background var(--transition);
+        display: flex;
+        align-items: center;
+        gap: 0.3rem;
+        white-space: nowrap;
+        font-family: inherit;
+      }
+      .ctrl-btn:hover {
+        color: var(--primary);
+        border-color: var(--primary);
+        background: var(--primary-light);
+      }
+      .ctrl-btn i {
+        font-size: 0.85rem;
+      }
+      .btn-cv {
+        flex-shrink: 0;
+        font-size: 0.8rem;
+        font-weight: 600;
+        color: var(--primary);
+        border: 1.5px solid var(--primary);
+        padding: 0.4rem 0.85rem;
+        border-radius: 6px;
+        transition:
+          background var(--transition),
+          color var(--transition);
+        white-space: nowrap;
+        font-family: inherit;
+      }
+      .btn-cv:hover {
+        background: var(--primary);
+        color: #fff;
+      }
+      .nav-toggle {
+        display: none;
+        background: none;
+        border: none;
+        font-size: 1.3rem;
+        color: var(--primary);
+        cursor: pointer;
+        padding: 0.25rem;
+      }
+
+      /* ═══ HERO ═══ */
+      #hero {
+        min-height: 100dvh;
+        background:
+          radial-gradient(
+            ellipse at 70% 50%,
+            rgba(0, 137, 123, 0.22) 0%,
+            transparent 60%
+          ),
+          var(--hero-bg);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: #fff;
+        padding: 6rem 1.5rem 4rem;
+        position: relative;
+        overflow: hidden;
+      }
+      #hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image: radial-gradient(var(--hero-dot) 1px, transparent 1px);
+        background-size: 28px 28px;
+        pointer-events: none;
+      }
+      .hero-photo-wrap {
+        width: 140px;
+        height: 140px;
+        border-radius: 50%;
+        border: 4px solid rgba(255, 255, 255, 0.3);
+        overflow: hidden;
+        margin-bottom: 1.8rem;
+        background: var(--primary-mid);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        box-shadow: 0 0 0 8px rgba(255, 255, 255, 0.07);
+      }
+      .hero-photo-wrap img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 50%;
+      }
+      .hero-photo-initials {
+        font-family: "Playfair Display", serif;
+        font-size: 2.8rem;
+        font-weight: 700;
+        color: rgba(255, 255, 255, 0.85);
+        user-select: none;
+      }
+      .hero-eyebrow {
+        font-size: 0.78rem;
+        font-weight: 600;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 0.6);
+        margin-bottom: 1rem;
+      }
+      #hero h1 {
+        font-family: "Playfair Display", serif;
+        font-size: clamp(2.4rem, 6vw, 4.2rem);
+        font-weight: 700;
+        line-height: 1.15;
+        margin-bottom: 1rem;
+      }
+      .typed-wrap {
+        font-size: clamp(1rem, 2.5vw, 1.2rem);
+        color: rgba(255, 255, 255, 0.78);
+        min-height: 2em;
+        margin-bottom: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.3rem;
+      }
+      .typed-cursor {
+        display: inline-block;
+        width: 2px;
+        height: 1.1em;
+        background: var(--accent);
+        border-radius: 1px;
+        animation: blink 0.9s step-end infinite;
+        vertical-align: text-bottom;
+        margin-inline-start: 2px;
+      }
+      @keyframes blink {
+        0%,
+        100% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0;
+        }
+      }
+      .hero-cta {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom: 3rem;
+      }
+      .btn-primary {
+        background: var(--accent);
+        color: #1a1200;
+        font-weight: 600;
+        font-size: 0.9rem;
+        padding: 0.75rem 1.75rem;
+        border-radius: 8px;
+        transition:
+          transform var(--transition),
+          box-shadow var(--transition);
+        box-shadow: 0 4px 16px rgba(249, 168, 37, 0.35);
+      }
+      .btn-primary:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 24px rgba(249, 168, 37, 0.45);
+      }
+      .btn-outline-hero {
+        border: 1.5px solid rgba(255, 255, 255, 0.45);
+        color: #fff;
+        font-weight: 600;
+        font-size: 0.9rem;
+        padding: 0.75rem 1.75rem;
+        border-radius: 8px;
+        transition:
+          background var(--transition),
+          border-color var(--transition);
+      }
+      .btn-outline-hero:hover {
+        background: rgba(255, 255, 255, 0.12);
+        border-color: rgba(255, 255, 255, 0.8);
+      }
+      .scroll-indicator {
+        position: absolute;
+        bottom: 2rem;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.3rem;
+        color: rgba(255, 255, 255, 0.4);
+        font-size: 0.68rem;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+      }
+      .scroll-indicator i {
+        animation: bounce 2s ease-in-out infinite;
+      }
+      @keyframes bounce {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(6px);
+        }
+      }
+
+      /* ═══ ABOUT ═══ */
+      .about-grid {
+        display: grid;
+        grid-template-columns: 1fr 330px;
+        gap: 3rem;
+        align-items: start;
+      }
+      .about-bio p {
+        font-size: 1.02rem;
+        line-height: 1.85;
+        margin-bottom: 1.1rem;
+        color: var(--text);
+      }
+      .role-badges {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        margin-top: 1.5rem;
+      }
+      .badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.35rem;
+        padding: 0.3rem 0.8rem;
+        border-radius: 20px;
+        font-size: 0.8rem;
+        font-weight: 500;
+      }
+      .badge-teal {
+        background: var(--primary-light);
+        color: var(--primary-dark);
+        border: 1px solid var(--border);
+      }
+      [data-theme="dark"] .badge-teal {
+        color: var(--primary);
+      }
+      .badge-amber {
+        background: var(--accent-light);
+        color: #7a5000;
+        border: 1px solid #e0b840;
+      }
+      [data-theme="dark"] .badge-amber {
+        color: #ffca28;
+      }
+      .stats-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+      }
+      .stat-card {
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        padding: 1.4rem 1rem;
+        text-align: center;
+        box-shadow: var(--shadow-sm);
+        transition:
+          transform var(--transition),
+          box-shadow var(--transition);
+      }
+      .stat-card:hover {
+        transform: translateY(-3px);
+        box-shadow: var(--shadow-md);
+      }
+      .stat-number {
+        font-family: "Playfair Display", serif;
+        font-size: 2.4rem;
+        font-weight: 700;
+        color: var(--primary);
+        line-height: 1;
+        display: block;
+      }
+      .stat-suffix {
+        font-size: 1.4rem;
+      }
+      .stat-label {
+        font-size: 0.78rem;
+        font-weight: 500;
+        color: var(--text-muted);
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        margin-top: 0.4rem;
+        display: block;
+      }
+
+      /* ═══ RESEARCH ═══ */
+      .pub-card {
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-left: 4px solid var(--primary);
+        border-radius: var(--radius);
+        padding: 1.5rem 1.6rem;
+        margin-bottom: 1.2rem;
+        box-shadow: var(--shadow-sm);
+        transition:
+          transform var(--transition),
+          box-shadow var(--transition);
+      }
+      [dir="rtl"] .pub-card {
+        border-left: 1px solid var(--border);
+        border-right: 4px solid var(--primary);
+      }
+      .pub-card:hover {
+        transform: translateY(-3px);
+        box-shadow: var(--shadow-lg);
+      }
+      .pub-card.review {
+        border-left-color: var(--accent);
+      }
+      [dir="rtl"] .pub-card.review {
+        border-left-color: var(--border);
+        border-right-color: var(--accent);
+      }
+      .pub-meta {
+        display: flex;
+        align-items: center;
+        gap: 0.6rem;
+        flex-wrap: wrap;
+        margin-bottom: 0.6rem;
+      }
+      .pub-journal {
+        font-size: 0.72rem;
+        font-weight: 600;
+        letter-spacing: 0.09em;
+        text-transform: uppercase;
+        color: var(--primary);
+      }
+      .pub-card.review .pub-journal {
+        color: var(--accent);
+      }
+      .pub-year {
+        font-size: 0.75rem;
+        font-weight: 600;
+        padding: 0.15rem 0.6rem;
+        border-radius: 12px;
+        background: var(--primary-light);
+        color: var(--primary-dark);
+      }
+      [data-theme="dark"] .pub-year {
+        color: var(--primary);
+      }
+      .pub-card.review .pub-year {
+        background: var(--accent-light);
+        color: #7a5000;
+      }
+      [data-theme="dark"] .pub-card.review .pub-year {
+        color: var(--accent);
+      }
+      .pub-badge {
+        font-size: 0.72rem;
+        font-weight: 700;
+        padding: 0.15rem 0.6rem;
+        border-radius: 12px;
+        background: var(--accent);
+        color: #1a1200;
+      }
+      .pub-title {
+        font-family: "Playfair Display", serif;
+        font-size: 1.05rem;
+        font-weight: 600;
+        color: var(--text);
+        line-height: 1.45;
+        margin-bottom: 0.5rem;
+      }
+      .pub-authors {
+        font-size: 0.85rem;
+        color: var(--text-muted);
+        margin-bottom: 0.5rem;
+      }
+      .pub-authors strong {
+        color: var(--primary);
+        font-weight: 600;
+      }
+      .pub-doi {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.3rem;
+        font-size: 0.8rem;
+        color: var(--primary);
+        font-weight: 500;
+        transition: color var(--transition);
+      }
+      .pub-doi:hover {
+        text-decoration: underline;
+      }
+
+      /* ═══ TIMELINE ═══ */
+      .timeline-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+      }
+      .timeline-col h3 {
+        font-family: "Playfair Display", serif;
+        font-size: 1.15rem;
+        font-weight: 700;
+        color: var(--primary-dark);
+        margin-bottom: 1.5rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+      [data-theme="dark"] .timeline-col h3 {
+        color: var(--primary);
+      }
+      .timeline-col h3 i {
+        color: var(--primary);
+      }
+      .timeline {
+        position: relative;
+      }
+      .timeline-item {
+        position: relative;
+        padding-inline-start: 2rem;
+        padding-bottom: 2rem;
+      }
+      .timeline-item:last-child {
+        padding-bottom: 0;
+      }
+      .timeline-item::before {
+        content: "";
+        position: absolute;
+        inset-inline-start: 7px;
+        top: 22px;
+        bottom: 0;
+        width: 2px;
+        background: var(--border);
+      }
+      .timeline-item:last-child::before {
+        display: none;
+      }
+      .timeline-dot {
+        position: absolute;
+        inset-inline-start: 0;
+        top: 4px;
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        border: 2.5px solid var(--primary);
+        background: var(--surface);
+        z-index: 1;
+        transition: background var(--transition);
+      }
+      .timeline-item:hover .timeline-dot {
+        background: var(--primary);
+      }
+      .timeline-date {
+        font-size: 0.75rem;
+        font-weight: 600;
+        color: var(--primary);
+        text-transform: uppercase;
+        letter-spacing: 0.07em;
+        margin-bottom: 0.25rem;
+        display: block;
+      }
+      .timeline-title {
+        font-family: "Playfair Display", serif;
+        font-size: 1rem;
+        font-weight: 700;
+        color: var(--text);
+        line-height: 1.3;
+        margin-bottom: 0.2rem;
+      }
+      .timeline-place {
+        font-size: 0.82rem;
+        font-weight: 600;
+        color: var(--primary);
+        margin-bottom: 0.4rem;
+        display: block;
+      }
+      .timeline-desc {
+        font-size: 0.875rem;
+        color: var(--text-muted);
+        line-height: 1.65;
+      }
+
+      /* ═══ TEACHING ═══ */
+      .course-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.6rem;
+        margin-bottom: 2.5rem;
+      }
+      .course-tag {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.4rem;
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        padding: 0.45rem 0.9rem;
+        font-size: 0.875rem;
+        font-weight: 500;
+        color: var(--text);
+        box-shadow: var(--shadow-sm);
+        transition:
+          background var(--transition),
+          color var(--transition),
+          border-color var(--transition),
+          transform var(--transition);
+      }
+      .course-tag i {
+        color: var(--primary);
+        font-size: 0.8rem;
+      }
+      .course-tag:hover {
+        background: var(--primary-light);
+        border-color: var(--primary);
+        color: var(--primary-dark);
+        transform: translateY(-2px);
+      }
+      [data-theme="dark"] .course-tag:hover {
+        color: var(--primary);
+      }
+      .dev-cards {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.2rem;
+      }
+      .dev-card {
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        padding: 1.4rem;
+        box-shadow: var(--shadow-sm);
+        transition:
+          transform var(--transition),
+          box-shadow var(--transition);
+      }
+      .dev-card:hover {
+        transform: translateY(-3px);
+        box-shadow: var(--shadow-md);
+      }
+      .dev-card-icon {
+        width: 40px;
+        height: 40px;
+        border-radius: 10px;
+        background: var(--primary-light);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 0.8rem;
+      }
+      .dev-card-icon i {
+        color: var(--primary);
+        font-size: 1.1rem;
+      }
+      .dev-card h4 {
+        font-family: "Playfair Display", serif;
+        font-size: 0.95rem;
+        font-weight: 700;
+        color: var(--text);
+        margin-bottom: 0.25rem;
+      }
+      .dev-card .dev-date {
+        font-size: 0.75rem;
+        color: var(--primary);
+        font-weight: 600;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        margin-bottom: 0.6rem;
+        display: block;
+      }
+      .dev-card p {
+        font-size: 0.85rem;
+        color: var(--text-muted);
+        line-height: 1.6;
+      }
+
+      /* ═══ TALKS ═══ */
+      .talk-card {
+        display: flex;
+        gap: 1.2rem;
+        align-items: flex-start;
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        padding: 1.2rem 1.4rem;
+        margin-bottom: 1rem;
+        box-shadow: var(--shadow-sm);
+        transition:
+          transform var(--transition),
+          box-shadow var(--transition);
+      }
+      .talk-card:hover {
+        transform: translateX(4px);
+        box-shadow: var(--shadow-md);
+      }
+      [dir="rtl"] .talk-card:hover {
+        transform: translateX(-4px);
+      }
+      .talk-year {
+        flex-shrink: 0;
+        background: var(--primary);
+        color: #fff;
+        font-size: 0.82rem;
+        font-weight: 700;
+        padding: 0.3rem 0.7rem;
+        border-radius: 6px;
+        margin-top: 0.1rem;
+        min-width: 52px;
+        text-align: center;
+      }
+      .talk-title {
+        font-family: "Playfair Display", serif;
+        font-size: 1rem;
+        font-weight: 700;
+        color: var(--text);
+        margin-bottom: 0.2rem;
+      }
+      .talk-venue {
+        font-size: 0.83rem;
+        color: var(--text-muted);
+      }
+      .talk-venue i {
+        color: var(--primary);
+        margin-inline-end: 0.3rem;
+      }
+
+      /* ═══ GALLERY ═══ */
+      .gallery-filters {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        margin-bottom: 1.8rem;
+      }
+      .gf-btn {
+        font-size: 0.82rem;
+        font-weight: 600;
+        padding: 0.4rem 1rem;
+        border-radius: 20px;
+        border: 1.5px solid var(--border);
+        background: var(--surface);
+        color: var(--text-muted);
+        cursor: pointer;
+        transition: all var(--transition);
+        font-family: inherit;
+      }
+      .gf-btn:hover,
+      .gf-btn.active {
+        background: var(--primary);
+        color: #fff;
+        border-color: var(--primary);
+      }
+      .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+      }
+      .gallery-item {
+        border-radius: var(--radius);
+        overflow: hidden;
+        position: relative;
+        cursor: pointer;
+        aspect-ratio: 4/3;
+        box-shadow: var(--shadow-sm);
+        transition:
+          transform var(--transition),
+          box-shadow var(--transition);
+      }
+      .gallery-item:hover {
+        transform: scale(1.03);
+        box-shadow: var(--shadow-lg);
+      }
+      .gallery-item:hover .gi-overlay {
+        opacity: 1;
+      }
+      .gallery-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        transition: transform 0.4s ease;
+      }
+      .gallery-item:hover .gallery-img {
+        transform: scale(1.06);
+      }
+      /* Placeholder card (no photo yet) */
+      .gallery-placeholder {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 0.6rem;
+        color: rgba(255, 255, 255, 0.8);
+        font-size: 0.8rem;
+        font-weight: 500;
+        text-align: center;
+        padding: 1rem;
+      }
+      .gallery-placeholder i {
+        font-size: 2rem;
+        opacity: 0.7;
+      }
+      .gi-overlay {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          to top,
+          rgba(0, 0, 0, 0.75) 0%,
+          rgba(0, 0, 0, 0.1) 60%,
+          transparent 100%
+        );
+        opacity: 0;
+        transition: opacity var(--transition);
+        display: flex;
+        align-items: flex-end;
+        padding: 1rem;
+      }
+      .gi-caption {
+        color: #fff;
+      }
+      .gi-caption strong {
+        display: block;
+        font-size: 0.875rem;
+        font-weight: 600;
+        line-height: 1.3;
+      }
+      .gi-caption span {
+        font-size: 0.75rem;
+        opacity: 0.8;
+      }
+      .gallery-add-note {
+        margin-top: 1.5rem;
+        padding: 1rem 1.4rem;
+        background: var(--surface);
+        border: 1.5px dashed var(--border);
+        border-radius: var(--radius);
+        font-size: 0.85rem;
+        color: var(--text-muted);
+        display: flex;
+        align-items: flex-start;
+        gap: 0.7rem;
+      }
+      .gallery-add-note i {
+        color: var(--accent);
+        font-size: 1rem;
+        flex-shrink: 0;
+        margin-top: 0.15rem;
+      }
+
+      /* ─── Lightbox ─── */
+      .lightbox {
+        position: fixed;
+        inset: 0;
+        z-index: 9999;
+        background: rgba(0, 0, 0, 0.92);
+        backdrop-filter: blur(6px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.25s;
+      }
+      .lightbox.open {
+        opacity: 1;
+        pointer-events: auto;
+      }
+      .lb-inner {
+        position: relative;
+        max-width: 90vw;
+        max-height: 90vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .lb-inner img {
+        max-width: 100%;
+        max-height: 72vh;
+        object-fit: contain;
+        border-radius: 8px;
+        box-shadow: 0 8px 40px rgba(0, 0, 0, 0.6);
+      }
+      .lb-caption {
+        text-align: center;
+        margin-top: 1rem;
+        color: #fff;
+      }
+      .lb-caption h4 {
+        font-family: "Playfair Display", serif;
+        font-size: 1.05rem;
+        margin-bottom: 0.25rem;
+      }
+      .lb-caption p {
+        font-size: 0.85rem;
+        color: rgba(255, 255, 255, 0.65);
+      }
+      .lb-close,
+      .lb-prev,
+      .lb-next {
+        position: fixed;
+        background: rgba(255, 255, 255, 0.1);
+        border: none;
+        color: #fff;
+        cursor: pointer;
+        border-radius: 50%;
+        width: 44px;
+        height: 44px;
+        font-size: 1.2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: background var(--transition);
+      }
+      .lb-close:hover,
+      .lb-prev:hover,
+      .lb-next:hover {
+        background: rgba(255, 255, 255, 0.25);
+      }
+      .lb-close {
+        top: 1.5rem;
+        right: 1.5rem;
+        font-size: 1.4rem;
+      }
+      .lb-prev {
+        left: 1.5rem;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 1.5rem;
+      }
+      .lb-next {
+        right: 1.5rem;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 1.5rem;
+      }
+      [dir="rtl"] .lb-close {
+        right: auto;
+        left: 1.5rem;
+      }
+      [dir="rtl"] .lb-prev {
+        left: auto;
+        right: 1.5rem;
+      }
+      [dir="rtl"] .lb-next {
+        right: auto;
+        left: 1.5rem;
+      }
+
+      /* ═══ SKILLS ═══ */
+      .skills-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+      }
+      .skill-group {
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        padding: 1.4rem;
+        box-shadow: var(--shadow-sm);
+      }
+      .skill-group h4 {
+        font-family: "Playfair Display", serif;
+        font-size: 0.95rem;
+        font-weight: 700;
+        color: var(--primary-dark);
+        margin-bottom: 1rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+      [data-theme="dark"] .skill-group h4 {
+        color: var(--primary);
+      }
+      .skill-group h4 i {
+        color: var(--primary);
+        font-size: 0.9rem;
+      }
+      .skill-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.4rem;
+      }
+      .skill-tag {
+        display: inline-block;
+        padding: 0.28rem 0.8rem;
+        border-radius: 20px;
+        background: var(--primary-light);
+        color: var(--primary-dark);
+        font-size: 0.8rem;
+        font-weight: 500;
+        border: 1px solid var(--border);
+        transition:
+          background var(--transition),
+          color var(--transition);
+        cursor: default;
+      }
+      [data-theme="dark"] .skill-tag {
+        color: var(--primary);
+      }
+      .skill-tag:hover {
+        background: var(--primary);
+        color: #fff;
+      }
+      .lang-item {
+        margin-bottom: 0.9rem;
+      }
+      .lang-item:last-child {
+        margin-bottom: 0;
+      }
+      .lang-label {
+        display: flex;
+        justify-content: space-between;
+        font-size: 0.85rem;
+        font-weight: 600;
+        color: var(--text);
+        margin-bottom: 0.4rem;
+      }
+      .lang-level {
+        color: var(--text-muted);
+        font-weight: 400;
+      }
+      .lang-bar-bg {
+        height: 6px;
+        background: var(--border);
+        border-radius: 3px;
+        overflow: hidden;
+      }
+      .lang-bar {
+        height: 100%;
+        background: linear-gradient(90deg, var(--primary), var(--primary-mid));
+        border-radius: 3px;
+        width: 0;
+        transition: width 1.1s cubic-bezier(0.22, 1, 0.36, 1);
+      }
+      [dir="rtl"] .lang-bar {
+        background: linear-gradient(270deg, var(--primary), var(--primary-mid));
+      }
+
+      /* ═══ CONTACT ═══ */
+      .contact-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+        align-items: start;
+      }
+      .contact-info-item {
+        display: flex;
+        align-items: flex-start;
+        gap: 1rem;
+        margin-bottom: 1.5rem;
+      }
+      .contact-icon {
+        width: 42px;
+        height: 42px;
+        border-radius: 10px;
+        background: rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+      }
+      .contact-icon i {
+        color: var(--accent);
+        font-size: 1rem;
+      }
+      .contact-label {
+        font-size: 0.72rem;
+        font-weight: 600;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 0.45);
+        display: block;
+        margin-bottom: 0.15rem;
+      }
+      .contact-value {
+        font-size: 0.95rem;
+        color: rgba(255, 255, 255, 0.88);
+      }
+      .contact-value a {
+        color: var(--accent);
+        transition: opacity var(--transition);
+      }
+      .contact-value a:hover {
+        opacity: 0.8;
+      }
+      .contact-links-title {
+        font-size: 0.75rem;
+        font-weight: 600;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 0.45);
+        margin-bottom: 1rem;
+        display: block;
+      }
+      .social-link-cards {
+        display: flex;
+        flex-direction: column;
+        gap: 0.7rem;
+      }
+      .social-link-card {
+        display: flex;
+        align-items: center;
+        gap: 0.9rem;
+        padding: 0.75rem 1rem;
+        border: 1px solid rgba(255, 255, 255, 0.13);
+        border-radius: var(--radius);
+        background: rgba(255, 255, 255, 0.05);
+        color: rgba(255, 255, 255, 0.82);
+        font-size: 0.875rem;
+        font-weight: 500;
+        transition:
+          background var(--transition),
+          border-color var(--transition),
+          transform var(--transition);
+      }
+      .social-link-card:hover {
+        background: rgba(255, 255, 255, 0.12);
+        border-color: rgba(255, 255, 255, 0.3);
+        transform: translateX(4px);
+        color: #fff;
+      }
+      [dir="rtl"] .social-link-card:hover {
+        transform: translateX(-4px);
+      }
+      .social-link-card i {
+        font-size: 1.1rem;
+        color: var(--accent);
+        width: 20px;
+        text-align: center;
+      }
+      .social-link-card .social-handle {
+        font-size: 0.75rem;
+        color: rgba(255, 255, 255, 0.4);
+        margin-inline-start: auto;
+      }
+
+      /* ═══ FOOTER ═══ */
+      #site-footer {
+        background: var(--footer-bg);
+        color: rgba(255, 255, 255, 0.55);
+        padding: 2.5rem 0;
+        text-align: center;
+      }
+      .footer-name {
+        font-family: "Playfair Display", serif;
+        font-size: 1rem;
+        color: rgba(255, 255, 255, 0.85);
+        font-weight: 600;
+        margin-bottom: 0.2rem;
+      }
+      .footer-affil {
+        font-size: 0.8rem;
+        margin-bottom: 1.2rem;
+      }
+      .footer-social {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        margin-bottom: 1.2rem;
+      }
+      .footer-social a {
+        width: 36px;
+        height: 36px;
+        border-radius: 8px;
+        border: 1px solid rgba(255, 255, 255, 0.13);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: rgba(255, 255, 255, 0.55);
+        font-size: 0.9rem;
+        transition:
+          background var(--transition),
+          color var(--transition),
+          border-color var(--transition);
+      }
+      .footer-social a:hover {
+        background: var(--primary);
+        color: #fff;
+        border-color: var(--primary);
+      }
+      .footer-copy {
+        font-size: 0.75rem;
+      }
+
+      /* ═══ RESPONSIVE ═══ */
+      @media (max-width: 900px) {
+        .about-grid {
+          grid-template-columns: 1fr;
+        }
+        .about-stats {
+          order: -1;
+        }
+        .stats-grid {
+          grid-template-columns: repeat(4, 1fr);
+        }
+        .timeline-grid {
+          grid-template-columns: 1fr;
+          gap: 1rem;
+        }
+        .skills-grid {
+          grid-template-columns: 1fr;
+        }
+        .contact-grid {
+          grid-template-columns: 1fr;
+        }
+        .dev-cards {
+          grid-template-columns: 1fr;
+        }
+        .gallery-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+      @media (max-width: 768px) {
+        #primary-nav ul {
+          display: none;
+          position: absolute;
+          top: 68px;
+          left: 0;
+          right: 0;
+          background: var(--header-bg);
+          flex-direction: column;
+          align-items: stretch;
+          padding: 0.75rem 1rem;
+          border-bottom: 2px solid var(--primary);
+          box-shadow: var(--shadow-md);
+          gap: 0;
+          z-index: 999;
+        }
+        #primary-nav ul.open {
+          display: flex;
+        }
+        #primary-nav a {
+          padding: 0.6rem 0.5rem;
+        }
+        #primary-nav a.active::after {
+          display: none;
+        }
+        .nav-toggle {
+          display: block;
+        }
+        .btn-cv {
+          display: none;
+        }
+        .stats-grid {
+          grid-template-columns: 1fr 1fr;
+        }
+        .section {
+          padding: 3.5rem 0;
+        }
+        .header-controls .ctrl-btn span {
+          display: none;
+        }
+      }
+      @media (max-width: 480px) {
+        .hero-cta {
+          flex-direction: column;
+        }
+        .btn-primary,
+        .btn-outline-hero {
+          width: 100%;
+          text-align: center;
+        }
+        .talk-card {
+          flex-direction: column;
+          gap: 0.6rem;
+        }
+        .gallery-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- ═══ HEADER ═══ -->
+    <header id="site-header">
+      <div class="container header-inner">
+        <a class="logo" href="index.html"></a>
+          <img src="imgs/Logo.png" alt="MNT" style = "width: 50px; height: 50px;" />
+        </a>
+
+        <nav id="primary-nav" aria-label="Primary navigation">
+          <ul id="nav-list">
+            <li><a href="#about" data-i18n="nav.about">About</a></li>
+            <li><a href="#research" data-i18n="nav.research">Research</a></li>
+            <li>
+              <a href="#education" data-i18n="nav.education">Education</a>
+            </li>
+            <li><a href="#teaching" data-i18n="nav.teaching">Teaching</a></li>
+            <li><a href="#talks" data-i18n="nav.talks">Talks</a></li>
+            <li><a href="#gallery" data-i18n="nav.gallery">Gallery</a></li>
+            <li><a href="#skills" data-i18n="nav.skills">Skills</a></li>
+            <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div class="header-controls">
+          <button
+            id="theme-toggle"
+            class="ctrl-btn"
+            aria-label="Toggle dark mode"
+          >
+            <i class="fa fa-moon" id="theme-icon"></i>
+            <span id="theme-label">Dark</span>
+          </button>
+          <button
+            id="lang-toggle"
+            class="ctrl-btn"
+            aria-label="Switch language"
+          >
+            <i class="fa fa-globe"></i>
+            <span id="lang-label">عربي</span>
+          </button>
+        </div>
+
+        <a class="btn-cv" href="cv.pdf" download>
+          <i
+            class="fa fa-download"
+            style="margin-inline-end: 0.35rem; font-size: 0.75rem"
+          ></i>
+          <span data-i18n="header.downloadCV">Download CV</span>
+        </a>
+        <button
+          class="nav-toggle"
+          id="nav-toggle"
+          aria-label="Toggle menu"
+          aria-expanded="false"
+        >
+          <i class="fa fa-bars"></i>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <!-- ═══ HERO ═══ -->
+      <section id="hero" aria-label="Introduction">
+        <div class="hero-photo-wrap">
+          <img
+            src="imgs/profile/Personal07.jpeg"
+            alt="Dr. Majed N. Turkistani"
+            id="hero-img"
+            style="display: none"
+          />
+          <span class="hero-photo-initials" id="hero-initials">MNT</span>
+        </div>
+        <p class="hero-eyebrow" data-i18n="hero.eyebrow">
+          Assistant Professor · King Abdulaziz University, Jeddah
+        </p>
+        <h1>Dr. Majed N. Turkistani</h1>
+        <div class="typed-wrap" aria-live="polite">
+          <span id="typed-text"></span>
+          <span class="typed-cursor" aria-hidden="true"></span>
+        </div>
+        <div class="hero-cta">
+          <a href="#research" class="btn-primary">
+            <i class="fa fa-flask" style="margin-inline-end: 0.4rem"></i>
+            <span data-i18n="hero.cta1">View Research</span>
+          </a>
+          <a href="#contact" class="btn-outline-hero">
+            <i class="fa fa-envelope" style="margin-inline-end: 0.4rem"></i>
+            <span data-i18n="hero.cta2">Get in Touch</span>
+          </a>
+        </div>
+        <div class="scroll-indicator" aria-hidden="true">
+          <span data-i18n="hero.scroll">Scroll</span>
+          <i class="fa fa-chevron-down"></i>
+        </div>
+      </section>
+
+      <!-- ═══ ABOUT ═══ -->
+      <section id="about" class="section reveal">
+        <div class="container">
+          <div class="section-header">
+            <h2 class="section-title" data-i18n="about.title">About</h2>
+          </div>
+          <div class="about-grid">
+            <div class="about-bio">
+              <p id="bio1"></p>
+              <p id="bio2"></p>
+              <p id="bio3"></p>
+              <div class="role-badges">
+                <span class="badge badge-amber"
+                  ><i class="fa fa-award"></i
+                  ><span data-i18n="about.badge1"
+                    >KAU Excellence Award 2023</span
+                  ></span
+                >
+                <span class="badge badge-teal"
+                  ><i class="fa fa-users"></i
+                  ><span data-i18n="about.badge2"
+                    >President, Saudi Geologic Club</span
+                  ></span
+                >
+                <span class="badge badge-teal"
+                  ><i class="fa fa-bullhorn"></i
+                  ><span data-i18n="about.badge3"
+                    >Supervisor, PR &amp; Media Unit</span
+                  ></span
+                >
+                <span class="badge badge-teal"
+                  ><i class="fa fa-graduation-cap"></i
+                  ><span data-i18n="about.badge4"
+                    >VP, Curriculum Design</span
+                  ></span
+                >
+                <span class="badge badge-teal"
+                  ><i class="fa fa-check-circle"></i
+                  ><span data-i18n="about.badge5"
+                    >VP, Quality Assurance</span
+                  ></span
+                >
+              </div>
+            </div>
+            <div class="about-stats">
+              <div class="stats-grid">
+                <div class="stat-card">
+                  <span class="stat-number"
+                    ><span class="counter" data-target="15">0</span
+                    ><span class="stat-suffix">+</span></span
+                  >
+                  <span class="stat-label" data-i18n="about.stat1"
+                    >Years Experience</span
+                  >
+                </div>
+                <div class="stat-card">
+                  <span class="stat-number"
+                    ><span class="counter" data-target="3">0</span></span
+                  >
+                  <span class="stat-label" data-i18n="about.stat2"
+                    >Publications</span
+                  >
+                </div>
+                <div class="stat-card">
+                  <span class="stat-number"
+                    ><span class="counter" data-target="12">0</span></span
+                  >
+                  <span class="stat-label" data-i18n="about.stat3"
+                    >Courses Taught</span
+                  >
+                </div>
+                <div class="stat-card">
+                  <span class="stat-number"
+                    ><span class="counter" data-target="1">0</span></span
+                  >
+                  <span class="stat-label" data-i18n="about.stat4"
+                    >University Award</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══ RESEARCH ═══ -->
+      <section id="research" class="section section-alt reveal">
+        <div class="container">
+          <div class="section-header">
+            <h2 class="section-title" data-i18n="research.title">Research</h2>
+            <p data-i18n="research.desc">
+              Peer-reviewed publications and manuscripts currently under review.
+            </p>
+          </div>
+
+          <h3 class="subsection-title" data-i18n="research.published">
+            Published Articles
+          </h3>
+
+          <div class="pub-card">
+            <div class="pub-meta">
+              <span class="pub-journal">Journal of Asian Earth Sciences</span>
+              <span class="pub-year">2026</span>
+            </div>
+            <h4 class="pub-title">
+              A Cryogenian-Early Ediacaran volcanosedimentary record of glacial deposits in northern Saudi Arabia, Arabian-Nubian Shield
+            </h4>
+            <p class="pub-authors">
+               Niu, Yazhuo; Collins, Alan S.; Fan, Runlong; Turkistani, Majed N.; Qubsani, Ashraf; Abu El-Enen, Mahrous M.; Al Garni, Saad; Guo, Lei;
+              <strong>Turkistani, M.N.</strong>; Genovese, C.; Páez, A.
+            </p>
+            <a
+              class="pub-doi"
+              href="https://doi.org/10.1111/sed.70002"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="fa fa-external-link-alt"></i> DOI: 10.1111/sed.70002
+            </a>
+          </div>
+
+          <div class="pub-card">
+            <div class="pub-meta">
+              <span class="pub-journal">Sedimentology</span>
+              <span class="pub-year">2025</span>
+            </div>
+            <h4 class="pub-title">
+              Establishing detailed chemofacies of depositional environments in
+              an epeiric seaway using high-resolution (500 μm) micro X-ray
+              fluorescence core scanning data
+            </h4>
+            <p class="pub-authors">
+              Gabriel, J.J.; Reinhardt, E.G.; Bhattacharya, J.P.;
+              <strong>Turkistani, M.N.</strong>; Genovese, C.; Páez, A.
+            </p>
+            <a
+              class="pub-doi"
+              href="https://doi.org/10.1111/sed.70002"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="fa fa-external-link-alt"></i> DOI: 10.1111/sed.70002
+            </a>
+          </div>
+
+          <div class="pub-card">
+            <div class="pub-meta">
+              <span class="pub-journal"
+                >Palaeogeography, Palaeoclimatology, Palaeoecology</span
+              >
+              <span class="pub-year">2022</span>
+            </div>
+            <h4 class="pub-title">
+              Foraminifera and testate amoebae morphogroup analysis and
+              biofacies of the Upper Cretaceous (Turonian) Ferron-Notom Delta,
+              Utah, USA
+            </h4>
+            <p class="pub-authors">
+              <strong>Turkistani, M.N.</strong>; Reinhardt, E.G.; Kynaston,
+              D.A.; Bhattacharya, J.P.
+            </p>
+            <a
+              class="pub-doi"
+              href="https://doi.org/10.1016/j.palaeo.2022.111146"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="fa fa-external-link-alt"></i> DOI:
+              10.1016/j.palaeo.2022.111146
+            </a>
+          </div>
+
+          <h3 class="subsection-title" data-i18n="research.review">
+            Articles Under Review
+          </h3>
+
+          <div class="pub-card review">
+            <div class="pub-meta">
+              <span class="pub-journal"
+                >Mediterranean Geosciences Union — 5th Annual Meeting</span
+              >
+              <span class="pub-year">2025</span>
+              <span class="pub-badge" data-i18n="research.inreview"
+                >In Review</span
+              >
+            </div>
+            <h4 class="pub-title">
+              Diagenesis and Textural Analysis of the Evaporite Succession of
+              the Upper Dafin Formation, Rabigh Area, Saudi Arabia
+            </h4>
+            <p class="pub-authors">
+              Tayeb, A.S.; <strong>Turkistani, M.N.</strong>; Sayed, M.G.
+            </p>
+          </div>
+
+          <div class="pub-card review">
+            <div class="pub-meta">
+              <span class="pub-journal"
+                >International Journal of Earth Sciences</span
+              >
+              <span class="pub-badge" data-i18n="research.inreview"
+                >In Review</span
+              >
+            </div>
+            <h4 class="pub-title">
+              Micro-XRF analysis of the Upper Cretaceous (Turonian) Caineville
+              North, Ferron-Notom Delta, Utah, USA
+            </h4>
+            <p class="pub-authors">
+              <strong>Turkistani, M.N.</strong>; Reinhardt, E.G.; Gabriel, J.J.;
+              Kynaston, D.A.; Bhattacharya, J.P.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══ EDUCATION & EXPERIENCE ═══ -->
+      <section id="education" class="section reveal">
+        <div class="container">
+          <div class="section-header">
+            <h2 class="section-title" data-i18n="edu.title">
+              Education &amp; Experience
+            </h2>
+          </div>
+          <div class="timeline-grid">
+            <div class="timeline-col">
+              <h3>
+                <i class="fa fa-graduation-cap"></i>
+                <span data-i18n="edu.edTitle">Education</span>
+              </h3>
+              <div class="timeline">
+                <div class="timeline-item">
+                  <span class="timeline-dot"></span>
+                  <span class="timeline-date">2016 – 2021</span>
+                  <h4 class="timeline-title" data-i18n="edu.phd">
+                    Ph.D. in Paleontology &amp; Stratigraphy
+                  </h4>
+                  <span class="timeline-place" data-i18n="edu.phdPlace"
+                    >McMaster University, Hamilton, Canada</span
+                  >
+                  <p class="timeline-desc" data-i18n="edu.phdDesc">
+                    Paleo-deltaic environments via biostratigraphical and
+                    micro-XRF analyses on the Ferron-Notom Delta, Mancos Shale
+                    Formation, Central Utah, USA.
+                  </p>
+                </div>
+                <div class="timeline-item">
+                  <span class="timeline-dot"></span>
+                  <span class="timeline-date">2013 – 2015</span>
+                  <h4 class="timeline-title" data-i18n="edu.msc">
+                    M.Sc. in Micropaleontology &amp; Paleoeecology
+                  </h4>
+                  <span class="timeline-place" data-i18n="edu.mscPlace"
+                    >University of Toronto, Canada</span
+                  >
+                  <p class="timeline-desc" data-i18n="edu.mscDesc">
+                    Coccolithophores applied to reconstruct paleoenvironmental
+                    conditions of the offshore Pakistan marine environment using
+                    135 core samples.
+                  </p>
+                </div>
+                <div class="timeline-item">
+                  <span class="timeline-dot"></span>
+                  <span class="timeline-date">2005 – 2009</span>
+                  <h4 class="timeline-title" data-i18n="edu.bsc">
+                    B.Sc. in Petroleum Geology &amp; Sedimentology
+                  </h4>
+                  <span class="timeline-place" data-i18n="edu.bscPlace"
+                    >King Abdulaziz University, Jeddah</span
+                  >
+                  <p class="timeline-desc" data-i18n="edu.bscDesc">
+                    GPA 3.8/5. Geology, paleontology, petroleum geology, and
+                    statistics. Active participant in departmental geological
+                    field trips.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="timeline-col">
+              <h3>
+                <i class="fa fa-briefcase"></i>
+                <span data-i18n="edu.expTitle">Experience</span>
+              </h3>
+              <div class="timeline">
+                <div class="timeline-item">
+                  <span class="timeline-dot"></span>
+                  <span class="timeline-date" data-i18n="edu.e1date"
+                    >2021 – Present</span
+                  >
+                  <h4 class="timeline-title" data-i18n="edu.e1">
+                    Assistant Professor of Paleontology &amp; Stratigraphy
+                  </h4>
+                  <span class="timeline-place" data-i18n="edu.e1place"
+                    >King Abdulaziz University, Jeddah</span
+                  >
+                  <p class="timeline-desc" data-i18n="edu.e1desc">
+                    Teaching, research, and academic leadership. PR &amp; Media
+                    Supervisor; President, Saudi Geologic Club; VP of multiple
+                    departmental committees.
+                  </p>
+                </div>
+                <div class="timeline-item">
+                  <span class="timeline-dot"></span>
+                  <span class="timeline-date">2009 – 2021</span>
+                  <h4 class="timeline-title" data-i18n="edu.e2">
+                    Lecturer of Paleontology &amp; Stratigraphy
+                  </h4>
+                  <span class="timeline-place" data-i18n="edu.e2place"
+                    >King Abdulaziz University, Jeddah</span
+                  >
+                  <p class="timeline-desc" data-i18n="edu.e2desc">
+                    Developed and delivered curricula; designed field trip
+                    experiences; mentored students through independent research
+                    projects.
+                  </p>
+                </div>
+                <div class="timeline-item">
+                  <span class="timeline-dot"></span>
+                  <span class="timeline-date">2007</span>
+                  <h4 class="timeline-title" data-i18n="edu.e3">
+                    Student Trainee
+                  </h4>
+                  <span class="timeline-place" data-i18n="edu.e3place"
+                    >Saudi Aramco Oil Company, Dhahran</span
+                  >
+                  <p class="timeline-desc" data-i18n="edu.e3desc">
+                    Summer rotational training program across departments,
+                    gaining exposure to petroleum industry workflows.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══ TEACHING ═══ -->
+      <section id="teaching" class="section section-alt reveal">
+        <div class="container">
+          <div class="section-header">
+            <h2 class="section-title" data-i18n="teach.title">Teaching</h2>
+            <p data-i18n="teach.desc">
+              Courses at King Abdulaziz University and selected professional
+              development programs.
+            </p>
+          </div>
+          <h3 class="subsection-title" data-i18n="teach.courses">
+            Courses at KAU
+          </h3>
+          <div class="course-grid">
+            <span class="course-tag"
+              ><i class="fa fa-book-open"></i
+              ><span data-i18n="teach.c1"
+                >Sedimentology and Paleontology</span
+              ></span
+            >
+            <span class="course-tag"
+              ><i class="fa fa-book-open"></i
+              ><span data-i18n="teach.c2">Paleontology</span></span
+            >
+            <span class="course-tag"
+              ><i class="fa fa-book-open"></i
+              ><span data-i18n="teach.c3">Biostratigraphy</span></span
+            >
+            <span class="course-tag"
+              ><i class="fa fa-book-open"></i
+              ><span data-i18n="teach.c4"
+                >Historical Geology and Paleoecology</span
+              ></span
+            >
+            <span class="course-tag"
+              ><i class="fa fa-book-open"></i
+              ><span data-i18n="teach.c5"
+                >Introduction to Petroleum Geology</span
+              ></span
+            >
+            <span class="course-tag"
+              ><i class="fa fa-book-open"></i
+              ><span data-i18n="teach.c6"
+                >Geology of the Arabian Shelf</span
+              ></span
+            >
+            <span class="course-tag"
+              ><i class="fa fa-book-open"></i
+              ><span data-i18n="teach.c7"
+                >Basin Analysis and Sequence Stratigraphy</span
+              ></span
+            >
+            <span class="course-tag"
+              ><i class="fa fa-book-open"></i
+              ><span data-i18n="teach.c8">Geologic Field Trips</span></span
+            >
+            <span class="course-tag"
+              ><i class="fa fa-book-open"></i
+              ><span data-i18n="teach.c9">Geologic Field Mapping</span></span
+            >
+            <span class="course-tag"
+              ><i class="fa fa-book-open"></i
+              ><span data-i18n="teach.c10"
+                >Job Market Skills for Earth Sciences</span
+              ></span
+            >
+          </div>
+          <h3 class="subsection-title" data-i18n="teach.devTitle">
+            Professional Development
+          </h3>
+
+          <div class="dev-cards">
+            <div class="dev-card">
+              <div class="dev-card-icon">
+                <i class="fa fa-chalkboard-teacher"></i>
+              </div>
+              <h4 data-i18n="teach.dev3Title">
+                The University Scholars Fellowship
+              </h4>
+              <span class="dev-date" data-i18n="teach.dev3Date"
+                >Jan 2026 – In Progress</span
+              >
+              <p data-i18n="teach.dev3Desc">
+                Developing and conducting a research project based on ideas generated from my field of expertise. The fellowship supports us with a wide range of resources and mentorship to ensure the success of our research project.
+              </p>
+            </div>
+
+            <div class="dev-card">
+              <div class="dev-card-icon">
+                <i class="fa fa-graduation-cap"></i>
+              </div>
+              <h4 data-i18n="teach.dev1Title">Academic Leadership Diploma</h4>
+              <span class="dev-date" data-i18n="teach.dev1Date"
+                >Sep 2024 – Dec 2024</span
+              >
+              <p data-i18n="teach.dev1Desc">
+                Completed a leadership diploma. Developed a strategic plan and
+                department-wide action plan, both approved by the departmental
+                council.
+              </p>
+            </div>
+            <div class="dev-card">
+              <div class="dev-card-icon">
+                <i class="fa fa-chalkboard-teacher"></i>
+              </div>
+              <h4 data-i18n="teach.dev2Title">
+                Professional Teacher Development Fellowship
+              </h4>
+              <span class="dev-date" data-i18n="teach.dev2Date"
+                >Jan 2025 – Aug 2025</span
+              >
+              <p data-i18n="teach.dev2Desc">
+                Developed course blueprints and complete portfolios aligned with
+                international standards for all taught courses.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══ TALKS ═══ -->
+      <section id="talks" class="section reveal">
+        <div class="container">
+          <div class="section-header">
+            <h2 class="section-title" data-i18n="talks.title">
+              Talks, Seminars &amp; Workshops
+            </h2>
+            <p data-i18n="talks.desc">
+              Invited talks, seminars, and professional development workshops
+              at universities and academic events.
+            </p>
+          </div>
+          <div class="talk-card">
+            <span class="talk-year">2026</span>
+            <div class="talk-body">
+              <div class="talk-title" data-i18n="talks.t0">
+                Conducting a Research Scratch: From Idea to Execution and its Ethics.
+              </div>
+              <div class="talk-venue">
+                <i class="fa fa-map-marker-alt"></i
+                ><span data-i18n="talks.v0"
+                  >King Abdulaziz University, Jeddah — Faculty &amp; students
+                  seminar</span
+                >
+              </div>
+            </div>
+          </div>
+          <div class="talk-card">
+            <span class="talk-year">2025</span>
+            <div class="talk-body">
+              <div class="talk-title" data-i18n="talks.t1">
+                Machine Learning Applications in Earth Sciences
+              </div>
+              <div class="talk-venue">
+                <i class="fa fa-map-marker-alt"></i
+                ><span data-i18n="talks.v1"
+                  >King Abdulaziz University, Jeddah — Faculty &amp; students
+                  seminar</span
+                >
+              </div>
+            </div>
+          </div>
+          <div class="talk-card">
+            <span class="talk-year">2025</span>
+            <div class="talk-body">
+              <div class="talk-title" data-i18n="talks.t5">Submitting A Competitive Nomination Application for Scientific Awards</div>
+              <div class="talk-venue"><i class="fa fa-map-marker-alt"></i><span data-i18n="talks.v5">King Abdulaziz University, Jeddah — One-day workshop</span></div>
+            </div>
+          </div>
+          <div class="talk-card">
+            <span class="talk-year">2025</span>
+            <div class="talk-body">
+              <div class="talk-title" data-i18n="talks.t6">Preparing Managing Nomination Files for Scientific Awards</div>
+              <div class="talk-venue"><i class="fa fa-map-marker-alt"></i><span data-i18n="talks.v6">King Abdulaziz University, Jeddah — One-day workshop</span></div>
+            </div>
+          </div>
+          <div class="talk-card">
+            <span class="talk-year">2025</span>
+            <div class="talk-body">
+              <div class="talk-title" data-i18n="talks.t7">Academic Writing Total Guide</div>
+              <div class="talk-venue"><i class="fa fa-map-marker-alt"></i><span data-i18n="talks.v7">King Abdulaziz University, Jeddah — One-day workshop</span></div>
+            </div>
+          </div>
+          <div class="talk-card">
+            <span class="talk-year">2025</span>
+            <div class="talk-body">
+              <div class="talk-title" data-i18n="talks.t8">Design Your Own Teaching Assistant</div>
+              <div class="talk-venue"><i class="fa fa-map-marker-alt"></i><span data-i18n="talks.v8">King Abdulaziz University, Jeddah — One-day workshop</span></div>
+            </div>
+          </div>
+          <div class="talk-card">
+            <span class="talk-year">2025</span>
+            <div class="talk-body">
+              <div class="talk-title" data-i18n="talks.t9">Skills for Publishing in High Ranked Indexed Journals</div>
+              <div class="talk-venue"><i class="fa fa-map-marker-alt"></i><span data-i18n="talks.v9">King Abdulaziz University, Jeddah — One-day workshop</span></div>
+            </div>
+          </div>
+          <div class="talk-card">
+            <span class="talk-year">2025</span>
+            <div class="talk-body">
+              <div class="talk-title" data-i18n="talks.t10">Standards of the Excellence Awards and Mechanisms of Nominations</div>
+              <div class="talk-venue"><i class="fa fa-map-marker-alt"></i><span data-i18n="talks.v10">King Abdulaziz University, Jeddah — One-day workshop</span></div>
+            </div>
+          </div>
+          <div class="talk-card">
+            <span class="talk-year">2025</span>
+            <div class="talk-body">
+              <div class="talk-title" data-i18n="talks.t11">Fostering Excellence in Teaching</div>
+              <div class="talk-venue"><i class="fa fa-map-marker-alt"></i><span data-i18n="talks.v11">King Abdulaziz University, Jeddah — One-day workshop</span></div>
+            </div>
+          </div>
+          <div class="talk-card">
+            <span class="talk-year">2025</span>
+            <div class="talk-body">
+              <div class="talk-title" data-i18n="talks.t12">From Data to Insights</div>
+              <div class="talk-venue"><i class="fa fa-map-marker-alt"></i><span data-i18n="talks.v12">King Abdulaziz University, Jeddah — One-day workshop</span></div>
+            </div>
+          </div>
+          <div class="talk-card">
+            <span class="talk-year">2025</span>
+            <div class="talk-body">
+              <div class="talk-title" data-i18n="talks.t13">From Researcher to Professor: The Journey of Academic Promotions</div>
+              <div class="talk-venue"><i class="fa fa-map-marker-alt"></i><span data-i18n="talks.v13">King Abdulaziz University, Jeddah — One-day workshop</span></div>
+            </div>
+          </div>
+          <div class="talk-card">
+            <span class="talk-year">2024</span>
+            <div class="talk-body">
+              <div class="talk-title" data-i18n="talks.t14">Academic Administrative Committee</div>
+              <div class="talk-venue"><i class="fa fa-map-marker-alt"></i><span data-i18n="talks.v14">King Abdulaziz University, Jeddah — One-day workshop</span></div>
+            </div>
+          </div>
+          <div class="talk-card">
+            <span class="talk-year">2024</span>
+            <div class="talk-body">
+              <div class="talk-title" data-i18n="talks.t15">Smart Technologies in Enhancing Faculty Research Capabilities</div>
+              <div class="talk-venue"><i class="fa fa-map-marker-alt"></i><span data-i18n="talks.v15">King Abdulaziz University, Jeddah — One-day workshop</span></div>
+            </div>
+          </div>
+          <div class="talk-card">
+            <span class="talk-year">2024</span>
+            <div class="talk-body">
+              <div class="talk-title" data-i18n="talks.t16">Professional Development Plan for Faculty Members</div>
+              <div class="talk-venue"><i class="fa fa-map-marker-alt"></i><span data-i18n="talks.v16">King Abdulaziz University, Jeddah — One-day workshop</span></div>
+            </div>
+          </div>
+          <div class="talk-card">
+            <span class="talk-year">2024</span>
+            <div class="talk-body">
+              <div class="talk-title" data-i18n="talks.t17">AI in Scientific Research</div>
+              <div class="talk-venue"><i class="fa fa-map-marker-alt"></i><span data-i18n="talks.v17">King Abdulaziz University, Jeddah — One-day workshop</span></div>
+            </div>
+          </div>
+          <div class="talk-card">
+            <span class="talk-year">2024</span>
+            <div class="talk-body">
+              <div class="talk-title" data-i18n="talks.t18">Learning and Teaching Strategies</div>
+              <div class="talk-venue"><i class="fa fa-map-marker-alt"></i><span data-i18n="talks.v18">King Abdulaziz University, Jeddah — One-day workshop</span></div>
+            </div>
+          </div>
+          <div class="talk-card">
+            <span class="talk-year">2023</span>
+            <div class="talk-body">
+              <div class="talk-title" data-i18n="talks.t2">
+                Biostratigraphy as a Tool to Investigate Paleoenvironmental
+                Conditions
+              </div>
+              <div class="talk-venue">
+                <i class="fa fa-map-marker-alt"></i
+                ><span data-i18n="talks.v2"
+                  >Saudi Geological Survey (SGS) Annual Seminar — Online</span
+                >
+              </div>
+            </div>
+          </div>
+          <div class="talk-card">
+            <span class="talk-year">2023</span>
+            <div class="talk-body">
+              <div class="talk-title" data-i18n="talks.t19">Strategies to Start Your Research in ISI Journals</div>
+              <div class="talk-venue"><i class="fa fa-map-marker-alt"></i><span data-i18n="talks.v19">King Abdulaziz University, Jeddah — One-day workshop</span></div>
+            </div>
+          </div>
+          <div class="talk-card">
+            <span class="talk-year">2021</span>
+            <div class="talk-body">
+              <div class="talk-title" data-i18n="talks.t20">Securing, Education, Distance Learning and Cyber-Attacks</div>
+              <div class="talk-venue"><i class="fa fa-map-marker-alt"></i><span data-i18n="talks.v20">King Abdulaziz University, Jeddah — One-day workshop</span></div>
+            </div>
+          </div>
+          <div class="talk-card">
+            <span class="talk-year">2021</span>
+            <div class="talk-body">
+              <div class="talk-title" data-i18n="talks.t21">Correlation and Regression Methods Using SPSS</div>
+              <div class="talk-venue"><i class="fa fa-map-marker-alt"></i><span data-i18n="talks.v21">King Abdulaziz University, Jeddah — One-day workshop</span></div>
+            </div>
+          </div>
+          <div class="talk-card">
+            <span class="talk-year">2021</span>
+            <div class="talk-body">
+              <div class="talk-title" data-i18n="talks.t22">How to Use Coaching Leadership Style to Become a Successful Leader</div>
+              <div class="talk-venue"><i class="fa fa-map-marker-alt"></i><span data-i18n="talks.v22">King Abdulaziz University, Jeddah — One-day workshop</span></div>
+            </div>
+          </div>
+          <div class="talk-card">
+            <span class="talk-year">2018</span>
+            <div class="talk-body">
+              <div class="talk-title" data-i18n="talks.t3">
+                Microfossils in Reconstructing Paleoenvironmental Conditions
+              </div>
+              <div class="talk-venue">
+                <i class="fa fa-map-marker-alt"></i
+                ><span data-i18n="talks.v3"
+                  >McMaster University Quantitative Sedimentology Lab,
+                  Hamilton</span
+                >
+              </div>
+            </div>
+          </div>
+          <div class="talk-card">
+            <span class="talk-year">2017</span>
+            <div class="talk-body">
+              <div class="talk-title" data-i18n="talks.t4">
+                The Geology of the Red Sea
+              </div>
+              <div class="talk-venue">
+                <i class="fa fa-map-marker-alt"></i
+                ><span data-i18n="talks.v4"
+                  >McMaster University Quantitative Sedimentology Laboratory,
+                  Hamilton</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══ GALLERY ═══ -->
+      <section id="gallery" class="section section-alt reveal">
+        <div class="container">
+          <div class="section-header">
+            <h2 class="section-title" data-i18n="gallery.title">
+              Field Work Gallery
+            </h2>
+            <p data-i18n="gallery.desc">
+              Photographs from geological field trips, research expeditions, and
+              fieldwork across the USA and Saudi Arabia.
+            </p>
+          </div>
+          <div class="gallery-filters" id="gallery-filters">
+            <button
+              class="gf-btn active"
+              data-filter="all"
+              data-i18n="gallery.all"
+            >
+              All
+            </button>
+            <button
+              class="gf-btn"
+              data-filter="fieldwork"
+              data-i18n="gallery.fieldwork"
+            >
+              Field Work
+            </button>
+            <button
+              class="gf-btn"
+              data-filter="research"
+              data-i18n="gallery.research"
+            >
+              Research Sites
+            </button>
+            <button
+              class="gf-btn"
+              data-filter="talks"
+              data-i18n="gallery.talks"
+            >
+              Talks &amp; Events
+            </button>
+            <button
+              class="gf-btn"
+              data-filter="specimens"
+              data-i18n="gallery.specimens"
+            >
+              Fossils &amp; Specimens
+            </button>
+          </div>
+          <div class="gallery-grid" id="gallery-grid"></div>
+        </div>
+      </section>
+
+      <!-- Lightbox -->
+      <div
+        id="lightbox"
+        class="lightbox"
+        role="dialog"
+        aria-modal="true"
+        aria-label="Image viewer"
+      >
+        <button class="lb-close" id="lb-close" aria-label="Close">
+          <i class="fa fa-times"></i>
+        </button>
+        <button class="lb-prev" id="lb-prev" aria-label="Previous">
+          <i class="fa fa-chevron-left"></i>
+        </button>
+        <button class="lb-next" id="lb-next" aria-label="Next">
+          <i class="fa fa-chevron-right"></i>
+        </button>
+        <div class="lb-inner">
+          <img id="lb-img" src="" alt="" />
+          <div class="lb-caption">
+            <h4 id="lb-title"></h4>
+            <p id="lb-desc"></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ═══ SKILLS ═══ -->
+      <section id="skills" class="section reveal">
+        <div class="container">
+          <div class="section-header">
+            <h2 class="section-title" data-i18n="skills.title">
+              Skills &amp; Languages
+            </h2>
+          </div>
+          <div class="skills-grid">
+            <div class="skill-group">
+              <h4>
+                <i class="fa fa-flask"></i>
+                <span data-i18n="skills.g1">Research &amp; Data Science</span>
+              </h4>
+              <div class="skill-tags">
+                <span class="skill-tag" data-i18n="skills.s1"
+                  >Geostatistics</span
+                >
+                <span class="skill-tag" data-i18n="skills.s2"
+                  >Machine Learning</span
+                >
+                <span class="skill-tag" data-i18n="skills.s3">Python</span>
+                <span class="skill-tag" data-i18n="skills.s4">R Language</span>
+                <span class="skill-tag" data-i18n="skills.s5"
+                  >Biostratigraphy</span
+                >
+                <span class="skill-tag" data-i18n="skills.s6"
+                  >Micro-XRF Analysis</span
+                >
+              </div>
+            </div>
+            <div class="skill-group">
+              <h4>
+                <i class="fa fa-chalkboard-teacher"></i>
+                <span data-i18n="skills.g2">Teaching &amp; Leadership</span>
+              </h4>
+              <div class="skill-tags">
+                <span class="skill-tag" data-i18n="skills.s7"
+                  >Teaching Geology</span
+                >
+                <span class="skill-tag" data-i18n="skills.s8"
+                  >Academic Leadership</span
+                >
+                <span class="skill-tag" data-i18n="skills.s9"
+                  >Curriculum Design</span
+                >
+                <span class="skill-tag" data-i18n="skills.s10"
+                  >Public Speaking</span
+                >
+                <span class="skill-tag" data-i18n="skills.s11"
+                  >Strategic Planning</span
+                >
+              </div>
+            </div>
+            <div class="skill-group">
+              <h4>
+                <i class="fa fa-palette"></i>
+                <span data-i18n="skills.g3">Communication &amp; Media</span>
+              </h4>
+              <div class="skill-tags">
+                <span class="skill-tag" data-i18n="skills.s12"
+                  >Graphic Design</span
+                >
+                <span class="skill-tag" data-i18n="skills.s13"
+                  >Photography</span
+                >
+                <span class="skill-tag" data-i18n="skills.s14"
+                  >HTML Web Development</span
+                >
+                <span class="skill-tag" data-i18n="skills.s15"
+                  >Public Relations</span
+                >
+              </div>
+            </div>
+            <div class="skill-group" id="lang-group">
+              <h4>
+                <i class="fa fa-language"></i>
+                <span data-i18n="skills.g4">Languages</span>
+              </h4>
+              <div class="lang-item">
+                <div class="lang-label">
+                  <span data-i18n="skills.arabic">Arabic</span>
+                  <span class="lang-level" data-i18n="skills.native"
+                    >Native</span
+                  >
+                </div>
+                <div class="lang-bar-bg">
+                  <div class="lang-bar" data-width="100"></div>
+                </div>
+              </div>
+              <div class="lang-item">
+                <div class="lang-label">
+                  <span data-i18n="skills.english">English</span>
+                  <span class="lang-level" data-i18n="skills.professional"
+                    >Professional</span
+                  >
+                </div>
+                <div class="lang-bar-bg">
+                  <div class="lang-bar" data-width="88"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══ CONTACT ═══ -->
+      <section id="contact" class="section section-dark reveal">
+        <div class="container">
+          <div class="section-header">
+            <h2 class="section-title" data-i18n="contact.title">Contact</h2>
+            <p data-i18n="contact.desc">
+              Open to research collaborations, visiting scholar opportunities,
+              and academic partnerships.
+            </p>
+          </div>
+          <div class="contact-grid">
+            <div>
+              <div class="contact-info-item">
+                <div class="contact-icon"><i class="fa fa-envelope"></i></div>
+                <div>
+                  <span class="contact-label" data-i18n="contact.emailLabel"
+                    >Email</span
+                  >
+                  <div class="contact-value">
+                    <a href="mailto:mturkistani@kau.edu.sa"
+                      >mturkistani@kau.edu.sa</a
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="contact-info-item">
+                <div class="contact-icon"><i class="fa fa-phone"></i></div>
+                <div>
+                  <span class="contact-label" data-i18n="contact.phoneLabel"
+                    >Phone</span
+                  >
+                  <div class="contact-value">+966 Upon Request</div>
+                </div>
+              </div>
+              <div class="contact-info-item">
+                <div class="contact-icon">
+                  <i class="fa fa-map-marker-alt"></i>
+                </div>
+                <div>
+                  <span class="contact-label" data-i18n="contact.affLabel"
+                    >Affiliation</span
+                  >
+                  <div class="contact-value" id="contact-address">
+                    Department of Petroleum Geology and Sedimentology<br />
+                    Faculty of Earth Sciences<br />
+                    King Abdulaziz University<br />
+                    Jeddah 21589, Saudi Arabia
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <span
+                class="contact-links-title"
+                data-i18n="contact.profilesLabel"
+                >Academic Profiles &amp; Social</span
+              >
+              <div class="social-link-cards">
+                <a
+                  href="https://www.linkedin.com/in/majed-n-turkistani-ab028b154/"
+                  class="social-link-card"
+                  aria-label="LinkedIn"
+                  ><!-- Replace # with your LinkedIn URL -->
+                  <i class="fab fa-linkedin"></i><span>LinkedIn</span
+                  ><span class="social-handle" data-i18n="contact.viewProfile"
+                    >View Profile</span
+                  >
+                </a>
+                <a
+                  href="https://x.com/mnturkistani"
+                  class="social-link-card"
+                  aria-label="X (Twitter)"
+                  ><!-- Replace # with your X URL -->
+                  <i class="fab fa-x-twitter"></i><span>X (Twitter)</span
+                  ><span class="social-handle" data-i18n="contact.viewProfile"
+                    >View Profile</span
+                  >
+                </a>
+                <a
+                  href="https://orcid.org/my-orcid?orcid=0000-0003-3807-1202"
+                  class="social-link-card"
+                  aria-label="ORCID"
+                  ><!-- Replace # with your ORCID URL -->
+                  <i class="fa fa-id-card"></i><span>ORCID</span
+                  ><span class="social-handle" data-i18n="contact.researcherID"
+                    >Researcher ID</span
+                  >
+                </a>
+                <a
+                  href="http://www.scopus.com/inward/authorDetails.url?authorID=57821304300&partnerID=MN8TOARS"
+                  class="social-link-card"
+                  aria-label="Scopus"
+                  ><!-- Replace # with your Scopus URL -->
+                  <i class="fa fa-database"></i><span>Scopus</span
+                  ><span class="social-handle" data-i18n="contact.authorProfile"
+                    >Author Profile</span
+                  >
+                </a>
+                <a
+                  href="https://www.webofscience.com/wos/author/record/GQH-0243-2022"
+                  class="social-link-card"
+                  aria-label="Web of Science"
+                  ><!-- Replace # with your WoS URL -->
+                  <i class="fa fa-atom"></i><span>Web of Science</span
+                  ><span class="social-handle" data-i18n="contact.authorProfile"
+                    >Author Profile</span
+                  >
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ═══ FOOTER ═══ -->
+    <footer id="site-footer">
+      <div class="container">
+        <p class="footer-name">Dr. Majed N. Turkistani</p>
+        <p class="footer-affil" data-i18n="footer.affil">
+          Assistant Professor of Paleontology &amp; Stratigraphy · King
+          Abdulaziz University
+        </p>
+        <div class="footer-social">
+          <a href="mailto:mturkistani@kau.edu.sa" aria-label="Email"
+            ><i class="fa fa-envelope"></i
+          ></a>
+          <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+          <a href="#" aria-label="X (Twitter)"
+            ><i class="fab fa-x-twitter"></i
+          ></a>
+          <a href="#" aria-label="ORCID"><i class="fa fa-id-card"></i></a>
+          <a href="#" aria-label="Scopus"><i class="fa fa-database"></i></a>
+        </div>
+        <p class="footer-copy" data-i18n="footer.copy">
+          &copy; 2026 Dr. Majed N. Turkistani · All rights reserved
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      /* ═══════════════════════════════════════════
+   TRANSLATIONS
+═══════════════════════════════════════════ */
+      const T = {
+        en: {
+          "nav.about": "About",
+          "nav.research": "Research",
+          "nav.education": "Education",
+          "nav.teaching": "Teaching",
+          "nav.talks": "Talks",
+          "nav.gallery": "Gallery",
+          "nav.skills": "Skills",
+          "nav.contact": "Contact",
+          "header.downloadCV": "Download CV",
+          "hero.eyebrow":
+            "Assistant Professor · King Abdulaziz University, Jeddah",
+          "hero.cta1": "View Research",
+          "hero.cta2": "Get in Touch",
+          "hero.scroll": "Scroll",
+          "about.title": "About",
+          "about.bio1":
+            "Dr. Majed Turkistani is an Assistant Professor of Paleontology and Stratigraphy at the Department of Petroleum Geology and Sedimentology, Faculty of Earth Sciences, King Abdulaziz University. With over 15 years of academic and research experience, his work focuses on biostratigraphy, paleo-deltaic environments, and geochemical analyses — blending classical field geology with modern data-driven approaches.",
+          "about.bio2":
+            "His doctoral research at McMaster University investigated paleo-deltaic sub-environments through biostratigraphical and micro-XRF analyses of the Ferron-Notom Delta, Mancos Shale Formation in Central Utah. His MSc at the University of Toronto applied Coccolithophores to reconstruct paleoenvironmental conditions of the offshore Pakistan marine environment. He integrates <strong>geostatistics, Python, R,</strong> and <strong>machine learning</strong> to advance paleontological research.",
+          "about.bio3":
+            "Beyond research, Dr. Turkistani is an active academic leader serving as Supervisor of the Public Relations and Media Unit and President of the Saudi Geologic Club. He received the <strong>2023 KAU President's Award for Excellence and Creativity in E-Learning</strong>, reflecting his commitment to innovative education.",
+          "about.badge1": "KAU Excellence Award 2023",
+          "about.badge2": "President, Saudi Geologic Club",
+          "about.badge3": "Supervisor, PR & Media Unit",
+          "about.badge4": "VP, Curriculum Design",
+          "about.badge5": "VP, Quality Assurance",
+          "about.stat1": "Years Experience",
+          "about.stat2": "Publications",
+          "about.stat3": "Courses Taught",
+          "about.stat4": "University Award",
+          "research.title": "Research",
+          "research.desc":
+            "Peer-reviewed publications and manuscripts currently under review.",
+          "research.published": "Published Articles",
+          "research.review": "Articles Under Review",
+          "research.inreview": "In Review",
+          "edu.title": "Education & Experience",
+          "edu.edTitle": "Education",
+          "edu.expTitle": "Experience",
+          "edu.phd": "Ph.D. in Paleontology &amp; Stratigraphy",
+          "edu.phdPlace": "McMaster University, Hamilton, Canada",
+          "edu.phdDesc":
+            "Paleo-deltaic environments via biostratigraphical and micro-XRF analyses on the Ferron-Notom Delta, Mancos Shale Formation, Central Utah, USA.",
+          "edu.msc": "M.Sc. in Micropaleontology &amp; Paleoecology",
+          "edu.mscPlace": "University of Toronto, Canada",
+          "edu.mscDesc":
+            "Coccolithophores applied to reconstruct paleoenvironmental conditions of the offshore Pakistan marine environment using 135 core samples.",
+          "edu.bsc": "B.Sc. in Petroleum Geology &amp; Sedimentology",
+          "edu.bscPlace": "King Abdulaziz University, Jeddah",
+          "edu.bscDesc":
+            "GPA 3.8/5. Geology, paleontology, petroleum geology, and statistics. Active participant in departmental geological field trips.",
+          "edu.e1date": "2021 – Present",
+          "edu.e1": "Assistant Professor of Paleontology & Stratigraphy",
+          "edu.e1place": "King Abdulaziz University, Jeddah",
+          "edu.e1desc":
+            "Teaching, research, and academic leadership. PR & Media Supervisor; President, Saudi Geologic Club; VP of multiple departmental committees.",
+          "edu.e2": "Lecturer of Paleontology & Stratigraphy",
+          "edu.e2place": "King Abdulaziz University, Jeddah",
+          "edu.e2desc":
+            "Developed and delivered curricula; designed field trip experiences; mentored students through independent research projects.",
+          "edu.e3": "Student Trainee",
+          "edu.e3place": "Saudi Aramco Oil Company, Dhahran",
+          "edu.e3desc":
+            "Summer rotational training program across departments, gaining exposure to petroleum industry workflows.",
+          "teach.title": "Teaching",
+          "teach.desc":
+            "Courses at King Abdulaziz University and selected professional development programs.",
+          "teach.courses": "Courses at KAU",
+          "teach.devTitle": "Professional Development",
+          "teach.c1": "Sedimentology and Paleontology",
+          "teach.c2": "Paleontology",
+          "teach.c3": "Biostratigraphy",
+          "teach.c4": "Historical Geology and Paleoecology",
+          "teach.c5": "Introduction to Petroleum Geology",
+          "teach.c6": "Geology of the Arabian Shelf",
+          "teach.c7": "Basin Analysis and Sequence Stratigraphy",
+          "teach.c8": "Geologic Field Trips",
+          "teach.c9": "Geologic Field Mapping",
+          "teach.c10": "Job Market Skills for Earth Sciences",
+          "teach.dev1Title": "Academic Leadership Diploma",
+          "teach.dev1Date": "Sep 2024 – Dec 2024",
+          "teach.dev1Desc":
+            "Completed a leadership diploma. Developed a strategic plan and department-wide action plan, both approved by the departmental council.",
+          "teach.dev2Title": "Professional Teacher Development Fellowship",
+          "teach.dev2Date": "Jan 2025 – Aug 2025",
+          "teach.dev2Desc":
+            "Developed course blueprints and complete portfolios aligned with international standards for all taught courses.",
+          "teach.dev3Title": "The University Scholars Fellowship",
+          "teach.dev3Date": "Jan 2026 – In Progress",
+          "teach.dev3Desc":
+            "Developing and conducting a research project based on ideas generated from my field of expertise. The fellowship supports us with a wide range of resources and mentorship to ensure the success of our research project.",
+          "talks.title": "Talks, Seminars & Workshops",
+          "talks.desc":
+            "Invited talks, seminars, and professional development workshops at universities and academic events.",
+          "talks.t0": "Conducting a Research Scratch: From Idea to Execution and its Ethics",
+          "talks.v0": "King Abdulaziz University, Jeddah — Faculty & students seminar",
+          "talks.t1": "Machine Learning Applications in Earth Sciences",
+          "talks.v1":
+            "King Abdulaziz University, Jeddah — Faculty & students seminar",
+          "talks.t2":
+            "Biostratigraphy as a Tool to Investigate Paleoenvironmental Conditions",
+          "talks.v2": "Saudi Geological Survey (SGS) Annual Seminar — Online",
+          "talks.t3":
+            "Microfossils in Reconstructing Paleoenvironmental Conditions",
+          "talks.v3":
+            "McMaster University Quantitative Sedimentology Lab, Hamilton",
+          "talks.t4": "The Geology of the Red Sea",
+          "talks.v4":
+            "McMaster University Quantitative Sedimentology Laboratory, Hamilton",
+          "talks.t5": "Submitting A Competitive Nomination Application for Scientific Awards",
+          "talks.v5": "King Abdulaziz University, Jeddah — One-day workshop",
+          "talks.t6": "Preparing Managing Nomination Files for Scientific Awards",
+          "talks.v6": "King Abdulaziz University, Jeddah — One-day workshop",
+          "talks.t7": "Academic Writing Total Guide",
+          "talks.v7": "King Abdulaziz University, Jeddah — One-day workshop",
+          "talks.t8": "Design Your Own Teaching Assistant",
+          "talks.v8": "King Abdulaziz University, Jeddah — One-day workshop",
+          "talks.t9": "Skills for Publishing in High Ranked Indexed Journals",
+          "talks.v9": "King Abdulaziz University, Jeddah — One-day workshop",
+          "talks.t10": "Standards of the Excellence Awards and Mechanisms of Nominations",
+          "talks.v10": "King Abdulaziz University, Jeddah — One-day workshop",
+          "talks.t11": "Fostering Excellence in Teaching",
+          "talks.v11": "King Abdulaziz University, Jeddah — One-day workshop",
+          "talks.t12": "From Data to Insights",
+          "talks.v12": "King Abdulaziz University, Jeddah — One-day workshop",
+          "talks.t13": "From Researcher to Professor: The Journey of Academic Promotions",
+          "talks.v13": "King Abdulaziz University, Jeddah — One-day workshop",
+          "talks.t14": "Academic Administrative Committee",
+          "talks.v14": "King Abdulaziz University, Jeddah — One-day workshop",
+          "talks.t15": "Smart Technologies in Enhancing Faculty Research Capabilities",
+          "talks.v15": "King Abdulaziz University, Jeddah — One-day workshop",
+          "talks.t16": "Professional Development Plan for Faculty Members",
+          "talks.v16": "King Abdulaziz University, Jeddah — One-day workshop",
+          "talks.t17": "AI in Scientific Research",
+          "talks.v17": "King Abdulaziz University, Jeddah — One-day workshop",
+          "talks.t18": "Learning and Teaching Strategies",
+          "talks.v18": "King Abdulaziz University, Jeddah — One-day workshop",
+          "talks.t19": "Strategies to Start Your Research in ISI Journals",
+          "talks.v19": "King Abdulaziz University, Jeddah — One-day workshop",
+          "talks.t20": "Securing, Education, Distance Learning and Cyber-Attacks",
+          "talks.v20": "King Abdulaziz University, Jeddah — One-day workshop",
+          "talks.t21": "Correlation and Regression Methods Using SPSS",
+          "talks.v21": "King Abdulaziz University, Jeddah — One-day workshop",
+          "talks.t22": "How to Use Coaching Leadership Style to Become a Successful Leader",
+          "talks.v22": "King Abdulaziz University, Jeddah — One-day workshop",
+          "gallery.title": "Field Work Gallery",
+          "gallery.desc":
+            "Photographs from geological field trips, research expeditions, and fieldwork across the USA and Saudi Arabia.",
+          "gallery.all": "All",
+          "gallery.fieldwork": "Field Work",
+          "gallery.talks": "Talks & Events",
+          "gallery.research": "Research Sites",
+          "gallery.specimens": "Fossils & Specimens",
+          "skills.title": "Skills & Languages",
+          "skills.g1": "Research & Data Science",
+          "skills.g2": "Teaching & Leadership",
+          "skills.g3": "Communication & Media",
+          "skills.g4": "Languages",
+          "skills.s1": "Geostatistics",
+          "skills.s2": "Machine Learning",
+          "skills.s3": "Python",
+          "skills.s4": "R Language",
+          "skills.s5": "Biostratigraphy",
+          "skills.s6": "Micro-XRF Analysis",
+          "skills.s7": "Teaching Geology",
+          "skills.s8": "Academic Leadership",
+          "skills.s9": "Curriculum Design",
+          "skills.s10": "Public Speaking",
+          "skills.s11": "Strategic Planning",
+          "skills.s12": "Graphic Design",
+          "skills.s13": "Photography",
+          "skills.s14": "HTML Web Development",
+          "skills.s15": "Public Relations",
+          "skills.arabic": "Arabic",
+          "skills.english": "English",
+          "skills.native": "Native",
+          "skills.professional": "Professional",
+          "contact.title": "Contact",
+          "contact.desc":
+            "Open to research collaborations, visiting scholar opportunities, and academic partnerships.",
+          "contact.emailLabel": "Email",
+          "contact.phoneLabel": "Phone",
+          "contact.affLabel": "Affiliation",
+          "contact.profilesLabel": "Academic Profiles & Social",
+          "contact.viewProfile": "View Profile",
+          "contact.researcherID": "Researcher ID",
+          "contact.authorProfile": "Author Profile",
+          "contact.address":
+            "Department of Petroleum Geology and Sedimentology<br>Faculty of Earth Sciences<br>King Abdulaziz University<br>Jeddah 21589, Saudi Arabia",
+          "footer.affil":
+            "Assistant Professor of Paleontology & Stratigraphy · King Abdulaziz University",
+          "footer.copy": "© 2026 Dr. Majed N. Turkistani · All rights reserved",
+        },
+        ar: {
+          "nav.about": "نبذة عني",
+          "nav.research": "البحث العلمي",
+          "nav.education": "التعليم والخبرة",
+          "nav.teaching": "التدريس",
+          "nav.talks": "المحاضرات",
+          "nav.gallery": "معرض الصور",
+          "nav.skills": "المهارات",
+          "nav.contact": "التواصل",
+          "header.downloadCV": "تحميل السيرة الذاتية",
+          "hero.eyebrow": "أستاذ مساعد · جامعة الملك عبدالعزيز، جدة",
+          "hero.cta1": "استعرض الأبحاث",
+          "hero.cta2": "تواصل معي",
+          "hero.scroll": "انتقل للأسفل",
+          "about.title": "نبذة عني",
+          "about.bio1":
+            "الدكتور ماجد تركستاني أستاذ مساعد في علم الحفريات والطبقات بقسم جيولوجيا البترول والترسبات كلية علوم الأرض، جامعة الملك عبدالعزيز. يمتلك خبرة أكاديمية وبحثية تمتد لأكثر من خمسة عشر عامًا، تتمحور أبحاثه حول التتابع الطبقي الحيوي والبيئات الدلتاوية القديمة والتحليلات الجيوكيميائية، جامعًا بين الجيولوجيا الحقلية الكلاسيكية والأساليب الحديثة القائمة على البيانات.",
+          "about.bio2":
+            "ركّزت رسالته للدكتوراه في جامعة ماكماستر على دراسة البيئات الدلتاوية القديمة عبر التحليلات الطبقية الحيوية والتفلور السيني الدقيق على دلتا فيرون-نوتوم، تكوين مانكوس الصخري في ولاية يوتا الأمريكية. أما رسالة الماجستير في جامعة تورنتو فقد طبّقت الكوكوليتوفورات لإعادة تشكيل الظروف البيئية القديمة للبيئة البحرية قبالة سواحل باكستان. يُتقن الدكتور تركستاني دمج <strong>الإحصاء الجيولوجي وبايثون وR والتعلم الآلي</strong> في البحث في علم الحفريات.",
+          "about.bio3":
+            "يضطلع الدكتور تركستاني بأدوار قيادية بارزة؛ إذ يشغل منصب المشرف على وحدة العلاقات العامة والإعلام، ورئيسًا للنادي الجيولوجي السعودي. وقد حاز <strong>جائزة رئيس جامعة الملك عبدالعزيز للتميز والإبداع في التعليم الإلكتروني 2023</strong>، تقديرًا لالتزامه المبتكر بأساليب التعليم الحديثة.",
+          "about.badge1": "جائزة التميز - جامعة الملك عبدالعزيز 2023",
+          "about.badge2": "رئيس النادي الجيولوجي السعودي",
+          "about.badge3": "مشرف وحدة العلاقات العامة والإعلام",
+          "about.badge4": "نائب رئيس لجنة تصميم المناهج",
+          "about.badge5": "نائب رئيس لجنة ضمان الجودة",
+          "about.stat1": "سنوات خبرة",
+          "about.stat2": "منشورات علمية",
+          "about.stat3": "مقررات تدريسية",
+          "about.stat4": "جائزة جامعية",
+          "research.title": "البحث العلمي",
+          "research.desc": "الأبحاث المحكّمة المنشورة والمخطوطات قيد المراجعة.",
+          "research.published": "الأبحاث المنشورة",
+          "research.review": "أبحاث قيد المراجعة",
+          "research.inreview": "قيد المراجعة",
+          "edu.title": "التعليم والخبرة",
+          "edu.edTitle": "التعليم",
+          "edu.expTitle": "الخبرة العملية",
+          "edu.phd": "دكتوراه في الأحافير والطبقات ",
+          "edu.phdPlace": "جامعة ماكماستر، هاميلتون، كندا",
+          "edu.phdDesc":
+            "دراسة البيئات الدلتاوية القديمة عبر التحليلات الطبقية الحيوية والتفلور السيني الدقيق على دلتا فيرون-نوتوم، تكوين مانكوس الصخري، يوتا، الولايات المتحدة.",
+          "edu.msc": "ماجستير في الأحافير الدقيقة والبيئة القديمة",
+          "edu.mscPlace": "جامعة تورنتو، كندا",
+          "edu.mscDesc":
+            "تطبيق الكوكوليتوفورات لإعادة تشكيل الظروف البيئية القديمة للبيئة البحرية قبالة سواحل باكستان باستخدام 135 عينة لبية.",
+          "edu.bsc": "بكالوريوس في جيولوجيا البترول والرسوبيات",
+          "edu.bscPlace": "جامعة الملك عبدالعزيز، جدة",
+          "edu.bscDesc":
+            "معدل تراكمي 3.8 من 5. مقررات في الجيولوجيا وعلم الحفريات وجيولوجيا البترول والإحصاء. مشارك فعّال في رحلات الدراسة الميدانية.",
+          "edu.e1date": "2021 – حتى الآن",
+          "edu.e1": "أستاذ مساعد في علم الحفريات والطبقات",
+          "edu.e1place": "جامعة الملك عبدالعزيز، جدة",
+          "edu.e1desc":
+            "التدريس والبحث العلمي والقيادة الأكاديمية. مشرف العلاقات العامة والإعلام؛ رئيس النادي الجيولوجي السعودي؛ نائب رئيس لعدة لجان أكاديمية.",
+          "edu.e2": "محاضر في علم الحفريات والطبقات",
+          "edu.e2place": "جامعة الملك عبدالعزيز، جدة",
+          "edu.e2desc":
+            "تطوير وتقديم مناهج متخصصة؛ تصميم رحلات ميدانية تعليمية؛ الإشراف على مشاريع البحث المستقلة للطلاب.",
+          "edu.e3": "متدرب طالب",
+          "edu.e3place": "شركة أرامكو السعودية، الظهران",
+          "edu.e3desc":
+            "برنامج تدريب صيفي تناوبي بين الأقسام المختلفة للتعرف على سير العمل والأنظمة في صناعة البترول.",
+          "teach.title": "التدريس",
+          "teach.desc":
+            "المقررات الدراسية في جامعة الملك عبدالعزيز وبرامج التطوير المهني المختارة.",
+          "teach.courses": "المقررات في جامعة الملك عبدالعزيز",
+          "teach.devTitle": "التطوير المهني",
+          "teach.c1": "علم الرسوبيات والحفريات",
+          "teach.c2": "علم الحفريات",
+          "teach.c3": "الطبقات الحيوية",
+          "teach.c4": "الجيولوجيا التاريخية والبيئة القديمة",
+          "teach.c5": "مقدمة في جيولوجيا البترول",
+          "teach.c6": "جيولوجيا الرف العربي",
+          "teach.c7": "تحليل الأحواض وطبقات التتابع",
+          "teach.c8": "الرحلات الجيولوجية الميدانية",
+          "teach.c9": "رسم الخرائط الجيولوجية الميدانية",
+          "teach.c10": "مهارات سوق العمل لعلوم الأرض",
+          "teach.dev1Title": "دبلوم القيادة الأكاديمية",
+          "teach.dev1Date": "سبتمبر 2024 – ديسمبر 2024",
+          "teach.dev1Desc":
+            "أتمّ دبلوم القيادة الأكاديمية وطوّر خطة استراتيجية وخطة عمل للقسم، وكلتاهما مُعتمدتان من مجلس القسم.",
+          "teach.dev2Title": "زمالة التطوير المهني للمعلمين",
+          "teach.dev2Date": "يناير 2025 – أغسطس 2025",
+          "teach.dev2Desc":
+            "طوّر مخططات تفصيلية لكل مقرر دراسي وحقائب مقررات متكاملة وفق المعايير الدولية.",
+          "teach.dev3Title": "زمالة علماء الجامعة",
+          "teach.dev3Date": "يناير 2026 – جارٍ",
+          "teach.dev3Desc":
+            "تطوير وتنفيذ مشروع بحثي انطلاقًا من أفكار مستوحاة من مجال التخصص، مع دعم الزمالة بموارد متنوعة وإرشاد أكاديمي لضمان نجاح المشروع البحثي.",
+          "talks.title": "المحاضرات والندوات وورش العمل",
+          "talks.desc":
+            "المحاضرات والندوات العلمية وورش العمل المهنية في الجامعات والفعاليات الأكاديمية.",
+          "talks.t0": "عمل بحث من الصفر: من الفكرة إلى التنفيذ وأخلاقياته",
+          "talks.v0": "جامعة الملك عبدالعزيز، جدة — ندوة أعضاء هيئة التدريس والطلاب",
+          "talks.t1": "تطبيقات التعلم الآلي في علوم الأرض",
+          "talks.v1":
+            "جامعة الملك عبدالعزيز، جدة — ندوة أعضاء هيئة التدريس والطلاب",
+          "talks.t2": "الطبقات الحيوية كأداة لدراسة الظروف البيئية القديمة",
+          "talks.v2":
+            "الندوة السنوية للهيئة السعودية للمساحة الجيولوجية — عن بُعد",
+          "talks.t3": "الأحافير الدقيقة في إعادة تشكيل الظروف البيئية القديمة",
+          "talks.v3": "مختبر الرسوبيات الكمّية، جامعة ماكماستر، هاميلتون",
+          "talks.t4": "جيولوجيا البحر الأحمر",
+          "talks.v4": "ندوة مختبر الرسوبيات الكمّية، جامعة ماكماستر، هاميلتون",
+          "talks.t5": "تقديم طلب ترشيح تنافسي للجوائز العلمية",
+          "talks.v5": "جامعة الملك عبدالعزيز، جدة — ورشة عمل",
+          "talks.t6": "إعداد وإدارة ملفات الترشيح للجوائز العلمية",
+          "talks.v6": "جامعة الملك عبدالعزيز، جدة — ورشة عمل",
+          "talks.t7": "الدليل الشامل للكتابة الأكاديمية",
+          "talks.v7": "جامعة الملك عبدالعزيز، جدة — ورشة عمل",
+          "talks.t8": "صمّم مساعدك التدريسي الخاص",
+          "talks.v8": "جامعة الملك عبدالعزيز، جدة — ورشة عمل",
+          "talks.t9": "مهارات النشر في المجلات العلمية المحكّمة عالية التصنيف",
+          "talks.v9": "جامعة الملك عبدالعزيز، جدة — ورشة عمل",
+          "talks.t10": "معايير جوائز التميز وآليات الترشيح",
+          "talks.v10": "جامعة الملك عبدالعزيز، جدة — ورشة عمل",
+          "talks.t11": "تعزيز التميز في التدريس",
+          "talks.v11": "جامعة الملك عبدالعزيز، جدة — ورشة عمل",
+          "talks.t12": "من البيانات إلى الرؤى",
+          "talks.v12": "جامعة الملك عبدالعزيز، جدة — ورشة عمل",
+          "talks.t13": "من باحث إلى أستاذ: مسار الترقيات الأكاديمية",
+          "talks.v13": "جامعة الملك عبدالعزيز، جدة — ورشة عمل",
+          "talks.t14": "اللجنة الإدارية الأكاديمية",
+          "talks.v14": "جامعة الملك عبدالعزيز، جدة — ورشة عمل",
+          "talks.t15": "التقنيات الذكية في تعزيز القدرات البحثية لأعضاء هيئة التدريس",
+          "talks.v15": "جامعة الملك عبدالعزيز، جدة — ورشة عمل",
+          "talks.t16": "خطة التطوير المهني لأعضاء هيئة التدريس",
+          "talks.v16": "جامعة الملك عبدالعزيز، جدة — ورشة عمل",
+          "talks.t17": "الذكاء الاصطناعي في البحث العلمي",
+          "talks.v17": "جامعة الملك عبدالعزيز، جدة — ورشة عمل",
+          "talks.t18": "استراتيجيات التعلم والتدريس",
+          "talks.v18": "جامعة الملك عبدالعزيز، جدة — ورشة عمل",
+          "talks.t19": "استراتيجيات نشر أبحاثك في مجلات ISI",
+          "talks.v19": "جامعة الملك عبدالعزيز، جدة — ورشة عمل",
+          "talks.t20": "الأمن والتعليم والتعلم عن بُعد والهجمات الإلكترونية",
+          "talks.v20": "جامعة الملك عبدالعزيز، جدة — ورشة عمل",
+          "talks.t21": "أساليب الارتباط والانحدار باستخدام SPSS",
+          "talks.v21": "جامعة الملك عبدالعزيز، جدة — ورشة عمل",
+          "talks.t22": "كيفية استخدام أسلوب القيادة التدريبية لتصبح قائدًا ناجحًا",
+          "talks.v22": "جامعة الملك عبدالعزيز، جدة — ورشة عمل",
+          "gallery.title": "معرض الأعمال الميدانية",
+          "gallery.desc":
+            "صور من الرحلات الجيولوجية الميدانية ومواقع الأبحاث في الولايات المتحدة والمملكة العربية السعودية.",
+          "gallery.all": "الكل",
+          "gallery.fieldwork": "الأعمال الميدانية",
+          "gallery.talks": "المحاضرات والفعاليات",
+          "gallery.research": "مواقع الأبحاث",
+          "gallery.specimens": "الأحافير والعينات",
+          "skills.title": "المهارات واللغات",
+          "skills.g1": "البحث وعلوم البيانات",
+          "skills.g2": "التدريس والقيادة",
+          "skills.g3": "التواصل والإعلام",
+          "skills.g4": "اللغات",
+          "skills.s1": "الإحصاء الجيولوجي",
+          "skills.s2": "التعلم الآلي",
+          "skills.s3": "بايثون",
+          "skills.s4": "لغة R",
+          "skills.s5": "الطبقات الحيوية",
+          "skills.s6": "التحليل بالتفلور السيني الدقيق",
+          "skills.s7": "تدريس الجيولوجيا",
+          "skills.s8": "القيادة الأكاديمية",
+          "skills.s9": "تصميم المناهج",
+          "skills.s10": "الخطابة العامة",
+          "skills.s11": "التخطيط الاستراتيجي",
+          "skills.s12": "التصميم الجرافيكي",
+          "skills.s13": "التصوير الفوتوغرافي",
+          "skills.s14": "تطوير صفحات الويب",
+          "skills.s15": "العلاقات العامة",
+          "skills.arabic": "العربية",
+          "skills.english": "الإنجليزية",
+          "skills.native": "اللغة الأم",
+          "skills.professional": "مستوى احترافي",
+          "contact.title": "التواصل",
+          "contact.desc":
+            "أرحّب بفرص التعاون البحثي والزيارات الأكاديمية والشراكات العلمية.",
+          "contact.emailLabel": "البريد الإلكتروني",
+          "contact.phoneLabel": "الهاتف",
+          "contact.affLabel": "الانتماء الأكاديمي",
+          "contact.profilesLabel": "الملفات الأكاديمية والتواصل الاجتماعي",
+          "contact.viewProfile": "عرض الملف الشخصي",
+          "contact.researcherID": "معرّف الباحث",
+          "contact.authorProfile": "ملف المؤلف",
+          "contact.address":
+            "قسم جيولوجيا البترول والرسوبيات<br>كلية علوم الأرض<br>جامعة الملك عبدالعزيز<br>جدة 21589، المملكة العربية السعودية",
+          "footer.affil":
+            "أستاذ مساعد في علم الحفريات والطبقات · جامعة الملك عبدالعزيز",
+          "footer.copy": "© 2026 د. ماجد ن. تركستاني · جميع الحقوق محفوظة",
+        },
+      };
+
+      /* ═══════════════════════════════════════════
+   GALLERY DATA  (loaded from gallery.json — do not edit manually)
+   Run generate_gallery.py to rebuild gallery.json after adding images.
+═══════════════════════════════════════════ */
+      let galleryItems = [];
+
+      /* ═══════════════════════════════════════════
+   CORE INIT
+═══════════════════════════════════════════ */
+
+      // Photo fallback
+      const heroImg = document.getElementById("hero-img");
+      const heroInitials = document.getElementById("hero-initials");
+      heroImg.onload = () => {
+        heroImg.style.display = "block";
+        heroInitials.style.display = "none";
+      };
+      heroImg.onerror = () => {
+        heroImg.style.display = "none";
+        heroInitials.style.display = "flex";
+      };
+      heroImg.src = heroImg.src;
+
+      // Sticky header shadow
+      const header = document.getElementById("site-header");
+      window.addEventListener(
+        "scroll",
+        () => header.classList.toggle("scrolled", window.scrollY > 10),
+        { passive: true }
+      );
+
+      // Mobile nav
+      const navToggle = document.getElementById("nav-toggle");
+      const navList = document.getElementById("nav-list");
+      navToggle.addEventListener("click", () => {
+        const open = navList.classList.toggle("open");
+        navToggle.setAttribute("aria-expanded", String(open));
+      });
+      navList.querySelectorAll("a").forEach((a) =>
+        a.addEventListener("click", () => {
+          navList.classList.remove("open");
+          navToggle.setAttribute("aria-expanded", "false");
+        })
+      );
+
+      // Active nav
+      const sections = document.querySelectorAll("main section[id]");
+      const navLinks = document.querySelectorAll("#primary-nav a");
+      new IntersectionObserver(
+        (entries) => {
+          entries.forEach((e) => {
+            if (e.isIntersecting) {
+              navLinks.forEach((l) => l.classList.remove("active"));
+              const a = document.querySelector(
+                `#primary-nav a[href="#${e.target.id}"]`
+              );
+              if (a) a.classList.add("active");
+            }
+          });
+        },
+        { rootMargin: "-40% 0px -55% 0px" }
+      ).observe &&
+        sections.forEach((s) =>
+          new IntersectionObserver(
+            (entries) => {
+              if (entries[0].isIntersecting) {
+                navLinks.forEach((l) => l.classList.remove("active"));
+                const a = document.querySelector(
+                  `#primary-nav a[href="#${s.id}"]`
+                );
+                if (a) a.classList.add("active");
+              }
+            },
+            { rootMargin: "-40% 0px -55% 0px" }
+          ).observe(s)
+        );
+
+      // Scroll reveal
+      new IntersectionObserver(
+        (entries, obs) => {
+          entries.forEach((e) => {
+            if (e.isIntersecting) {
+              e.target.classList.add("visible");
+              obs.unobserve(e.target);
+            }
+          });
+        },
+        { threshold: 0.1 }
+      ).observe &&
+        document.querySelectorAll(".reveal").forEach((el) =>
+          new IntersectionObserver(
+            (entries, obs) => {
+              if (entries[0].isIntersecting) {
+                el.classList.add("visible");
+                obs.unobserve(el);
+              }
+            },
+            { threshold: 0.1 }
+          ).observe(el)
+        );
+
+      // Stat counters
+      function animateCounter(el, target) {
+        const start = performance.now();
+        const tick = (now) => {
+          const p = Math.min((now - start) / 1400, 1);
+          el.textContent = Math.round((1 - Math.pow(1 - p, 3)) * target);
+          if (p < 1) requestAnimationFrame(tick);
+        };
+        requestAnimationFrame(tick);
+      }
+      new IntersectionObserver(
+        (entries, obs) => {
+          if (entries[0].isIntersecting) {
+            document
+              .querySelectorAll(".counter")
+              .forEach((c) => animateCounter(c, +c.dataset.target));
+            obs.unobserve(entries[0].target);
+          }
+        },
+        { threshold: 0.4 }
+      ).observe(document.getElementById("about"));
+
+      // Language bars
+      new IntersectionObserver(
+        (entries, obs) => {
+          if (entries[0].isIntersecting) {
+            document
+              .querySelectorAll(".lang-bar")
+              .forEach((b) => (b.style.width = b.dataset.width + "%"));
+            obs.unobserve(entries[0].target);
+          }
+        },
+        { threshold: 0.5 }
+      ).observe(document.getElementById("lang-group"));
+
+      /* ═══════════════════════════════════════════
+   THEME TOGGLE
+═══════════════════════════════════════════ */
+      // Declare BOTH variables here so applyTheme() can safely reference currentLang
+      let currentTheme = localStorage.getItem("theme") || "light";
+      let currentLang  = localStorage.getItem("lang")  || "en";
+      const html = document.documentElement;
+      const themeIcon = document.getElementById("theme-icon");
+      const themeLabel = document.getElementById("theme-label");
+
+      function applyTheme(theme) {
+        html.setAttribute("data-theme", theme);
+        currentTheme = theme;
+        localStorage.setItem("theme", theme);
+        const isDark = theme === "dark";
+        themeIcon.className = isDark ? "fa fa-sun" : "fa fa-moon";
+        themeLabel.textContent = isDark
+          ? currentLang === "ar"
+            ? "فاتح"
+            : "Light"
+          : currentLang === "ar"
+            ? "داكن"
+            : "Dark";
+      }
+      applyTheme(currentTheme);
+      document
+        .getElementById("theme-toggle")
+        .addEventListener("click", () =>
+          applyTheme(currentTheme === "light" ? "dark" : "light")
+        );
+
+      /* ═══════════════════════════════════════════
+   LANGUAGE TOGGLE
+═══════════════════════════════════════════ */
+      // currentLang already declared above (needed by applyTheme before this block runs)
+      const langLabel = document.getElementById("lang-label");
+
+      // Typed-text state
+      let typedRoles = [],
+        roleIdx = 0,
+        charIdx = 0,
+        deleting = false,
+        typedTimer = null;
+      const typedEl = document.getElementById("typed-text");
+
+      function startTyped() {
+        clearTimeout(typedTimer);
+        charIdx = 0;
+        roleIdx = 0;
+        deleting = false;
+        typedEl.textContent = "";
+        typedRoles =
+          currentLang === "ar"
+            ? [
+                "علم الحفريات والطبقات",
+                "الإحصاء الجيولوجي والتعلم الآلي",
+                "رئيس النادي الجيولوجي السعودي",
+                "جائزة التميز - جامعة الملك عبدالعزيز 2023",
+              ]
+            : [
+                "Paleontology & Stratigraphy",
+                "Geostatistics & Machine Learning",
+                "President, Saudi Geologic Club",
+                "KAU Excellence Award 2023",
+              ];
+        typeStep();
+      }
+
+      function typeStep() {
+        const cur = typedRoles[roleIdx];
+        if (!deleting) {
+          typedEl.textContent = cur.slice(0, ++charIdx);
+          if (charIdx === cur.length) {
+            deleting = true;
+            typedTimer = setTimeout(typeStep, 2200);
+            return;
+          }
+          typedTimer = setTimeout(typeStep, 60);
+        } else {
+          typedEl.textContent = cur.slice(0, --charIdx);
+          if (charIdx === 0) {
+            deleting = false;
+            roleIdx = (roleIdx + 1) % typedRoles.length;
+            typedTimer = setTimeout(typeStep, 400);
+            return;
+          }
+          typedTimer = setTimeout(typeStep, 35);
+        }
+      }
+
+      function applyLang(lang) {
+        currentLang = lang;
+        localStorage.setItem("lang", lang);
+        html.setAttribute("lang", lang);
+        html.setAttribute("dir", lang === "ar" ? "rtl" : "ltr");
+        langLabel.textContent = lang === "ar" ? "EN" : "عربي";
+
+        // Update theme button label
+        applyTheme(currentTheme);
+
+        // Update all data-i18n text
+        document.querySelectorAll("[data-i18n]").forEach((el) => {
+          const key = el.dataset.i18n;
+          const val = T[lang][key];
+          if (val !== undefined) el.innerHTML = val;
+        });
+
+        // Update bio paragraphs (use innerHTML for bold tags)
+        ["bio1", "bio2", "bio3"].forEach((id) => {
+          const el = document.getElementById(id);
+          const key = "about." + id;
+          if (el && T[lang][key]) el.innerHTML = T[lang][key];
+        });
+
+        // Update contact address
+        const addr = document.getElementById("contact-address");
+        if (addr && T[lang]["contact.address"])
+          addr.innerHTML = T[lang]["contact.address"];
+
+        // Restart typed text
+        startTyped();
+
+        // Re-render gallery captions
+        renderGallery(activeFilter);
+      }
+
+      document
+        .getElementById("lang-toggle")
+        .addEventListener("click", () =>
+          applyLang(currentLang === "en" ? "ar" : "en")
+        );
+
+      /* ═══════════════════════════════════════════
+   GALLERY
+═══════════════════════════════════════════ */
+      let activeFilter = "all";
+      let activeLbIndex = 0;
+      const grid = document.getElementById("gallery-grid");
+
+      function renderGallery(filter) {
+        activeFilter = filter;
+        const items =
+          filter === "all"
+            ? galleryItems
+            : galleryItems.filter((i) => i.category === filter);
+        grid.innerHTML = "";
+        items.forEach((item, i) => {
+          const div = document.createElement("div");
+          div.className = "gallery-item";
+          div.setAttribute("tabindex", "0");
+          div.setAttribute("role", "button");
+          div.setAttribute(
+            "aria-label",
+            currentLang === "ar" ? item.titleAr : item.titleEn
+          );
+          const realIdx = galleryItems.indexOf(item);
+
+          if (item.placeholder || !item.src) {
+            div.innerHTML = `
+        <div class="gallery-placeholder" style="background:${item.color};">
+          <i class="fa ${item.icon}" style="font-size:2.5rem;opacity:0.75;"></i>
+          <strong>${currentLang === "ar" ? item.titleAr : item.titleEn}</strong>
+          <span style="font-size:0.75rem;opacity:0.65;">${currentLang === "ar" ? item.descAr : item.descEn}</span>
+        </div>
+        <div class="gi-overlay">
+          <div class="gi-caption">
+            <strong>${currentLang === "ar" ? item.titleAr : item.titleEn}</strong>
+            <span>${currentLang === "ar" ? item.descAr : item.descEn}</span>
+          </div>
+        </div>`;
+          } else {
+            div.innerHTML = `
+        <img class="gallery-img" src="${item.src}" alt="${currentLang === "ar" ? item.titleAr : item.titleEn}" loading="lazy" />
+        <div class="gi-overlay">
+          <div class="gi-caption">
+            <strong>${currentLang === "ar" ? item.titleAr : item.titleEn}</strong>
+            <span>${currentLang === "ar" ? item.descAr : item.descEn}</span>
+          </div>
+        </div>`;
+          }
+
+          div.addEventListener("click", () => openLightbox(realIdx));
+          div.addEventListener("keydown", (e) => {
+            if (e.key === "Enter" || e.key === " ") openLightbox(realIdx);
+          });
+          grid.appendChild(div);
+        });
+      }
+
+      document
+        .getElementById("gallery-filters")
+        .addEventListener("click", (e) => {
+          const btn = e.target.closest(".gf-btn");
+          if (!btn) return;
+          document
+            .querySelectorAll(".gf-btn")
+            .forEach((b) => b.classList.remove("active"));
+          btn.classList.add("active");
+          renderGallery(btn.dataset.filter);
+        });
+
+      // Lightbox
+      const lightbox = document.getElementById("lightbox");
+      const lbImg = document.getElementById("lb-img");
+      const lbTitle = document.getElementById("lb-title");
+      const lbDesc = document.getElementById("lb-desc");
+
+      function openLightbox(idx) {
+        activeLbIndex = idx;
+        showLbItem(idx);
+        lightbox.classList.add("open");
+        document.body.style.overflow = "hidden";
+      }
+
+      function closeLightbox() {
+        lightbox.classList.remove("open");
+        document.body.style.overflow = "";
+      }
+
+      function showLbItem(idx) {
+        const item = galleryItems[idx];
+        if (item.placeholder || !item.src) {
+          lbImg.style.display = "none";
+        } else {
+          lbImg.src = item.src;
+          lbImg.alt = currentLang === "ar" ? item.titleAr : item.titleEn;
+          lbImg.style.display = "block";
+        }
+        lbTitle.textContent =
+          currentLang === "ar" ? item.titleAr : item.titleEn;
+        lbDesc.textContent = currentLang === "ar" ? item.descAr : item.descEn;
+        activeLbIndex = idx;
+      }
+
+      document
+        .getElementById("lb-close")
+        .addEventListener("click", closeLightbox);
+      document
+        .getElementById("lb-prev")
+        .addEventListener("click", () =>
+          showLbItem(
+            (activeLbIndex - 1 + galleryItems.length) % galleryItems.length
+          )
+        );
+      document
+        .getElementById("lb-next")
+        .addEventListener("click", () =>
+          showLbItem((activeLbIndex + 1) % galleryItems.length)
+        );
+      lightbox.addEventListener("click", (e) => {
+        if (e.target === lightbox) closeLightbox();
+      });
+      document.addEventListener("keydown", (e) => {
+        if (!lightbox.classList.contains("open")) return;
+        if (e.key === "Escape") closeLightbox();
+        if (e.key === "ArrowLeft")
+          showLbItem(
+            (activeLbIndex - 1 + galleryItems.length) % galleryItems.length
+          );
+        if (e.key === "ArrowRight")
+          showLbItem((activeLbIndex + 1) % galleryItems.length);
+      });
+
+      /* ═══════════════════════════════════════════
+   BOOT
+═══════════════════════════════════════════ */
+      applyLang(currentLang);
+
+      // Load gallery from gallery.json (generated by generate_gallery.py)
+      fetch("gallery.json")
+        .then((r) => {
+          if (!r.ok) throw new Error("gallery.json not found");
+          return r.json();
+        })
+        .then((data) => {
+          galleryItems = data;
+          renderGallery(activeFilter);
+        })
+        .catch(() => {
+          console.warn(
+            "gallery.json not found — run generate_gallery.py to generate it."
+          );
+          renderGallery(activeFilter); // render empty grid gracefully
+        });
+    </script>
+  </body>
+</html>
