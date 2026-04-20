@@ -856,6 +856,21 @@
         transform: translateY(-3px);
         box-shadow: var(--shadow-md);
       }
+      .dev-card-sub {
+        font-size: 0.82rem;
+        color: var(--text-muted);
+        margin: 0.2rem 0 0.5rem;
+      }
+      .club-statement { margin-top: 1rem; }
+      .club-statement strong {
+        display: block;
+        font-size: 0.72rem;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        color: var(--accent);
+        margin-bottom: 0.25rem;
+      }
+      .club-statement p { margin: 0; font-size: 0.88rem; line-height: 1.65; }
       .dev-card-icon {
         width: 40px;
         height: 40px;
@@ -1507,6 +1522,7 @@
               <a href="#education" data-i18n="nav.education">Education</a>
             </li>
             <li><a href="#teaching" data-i18n="nav.teaching">Teaching</a></li>
+            <li><a href="#service" data-i18n="nav.service">Service</a></li>
             <li><a href="#talks" data-i18n="nav.talks">Talks</a></li>
             <li><a href="#gallery" data-i18n="nav.gallery">Gallery</a></li>
             <li><a href="#skills" data-i18n="nav.skills">Skills</a></li>
@@ -2038,6 +2054,56 @@
                 Developed course blueprints and complete portfolios aligned with
                 international standards for all taught courses.
               </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══ ACADEMIC SERVICE & LEADERSHIP ═══ -->
+      <section id="service" class="section section-alt reveal">
+        <div class="container">
+          <div class="section-header">
+            <h2 class="section-title" data-i18n="service.title">
+              Academic Service &amp; Leadership
+            </h2>
+            <p data-i18n="service.desc">
+              Faculty and student engagement beyond the classroom.
+            </p>
+          </div>
+
+          <div class="dev-cards-grid">
+            <div class="dev-card">
+              <div class="dev-card-icon">
+                <i class="fa fa-users"></i>
+              </div>
+              <h4 data-i18n="service.clubName">Saudi Geologic Club</h4>
+              <p class="dev-card-sub" data-i18n="service.clubSub">
+                Faculty of Earth Sciences · King Abdulaziz University
+              </p>
+              <span class="dev-date">
+                <span data-i18n="service.clubRole">Founder &amp; President</span>
+                &nbsp;·&nbsp;
+                <span data-i18n="service.clubPeriod">2023 – 2025</span>
+              </span>
+
+              <div class="club-statement">
+                <strong data-i18n="service.missionLabel">Mission</strong>
+                <p data-i18n="service.missionText">
+                  The Saudi Geologic Club promotes and develops members' skills
+                  who are interested in various Earth sciences, through a series
+                  of workshops and seminars built on local and international standards.
+                </p>
+              </div>
+              <div class="club-statement">
+                <strong data-i18n="service.visionLabel">Vision</strong>
+                <p data-i18n="service.visionText">
+                  The Saudi Geologic Club aims to be at the forefront of student
+                  clubs in qualifying national competencies in the field of Earth
+                  Sciences and providing students with skills that suit the job
+                  market alongside the Kingdom's Vision 2030, via workshops and
+                  seminars that meet global and local standards.
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -2681,6 +2747,17 @@
           "teach.dev3Date": "Jan 2026 – In Progress",
           "teach.dev3Desc":
             "Developing and conducting a research project based on ideas generated from my field of expertise. The fellowship supports us with a wide range of resources and mentorship to ensure the success of our research project.",
+          "service.title": "Academic Service &amp; Leadership",
+          "service.desc": "Faculty and student engagement beyond the classroom.",
+          "service.clubName": "Saudi Geologic Club",
+          "service.clubSub": "Faculty of Earth Sciences · King Abdulaziz University",
+          "service.clubRole": "Founder &amp; President",
+          "service.clubPeriod": "2023 – 2025",
+          "service.missionLabel": "Mission",
+          "service.missionText": "The Saudi Geologic Club promotes and develops members' skills who are interested in various Earth sciences, through a series of workshops and seminars built on local and international standards.",
+          "service.visionLabel": "Vision",
+          "service.visionText": "The Saudi Geologic Club aims to be at the forefront of student clubs in qualifying national competencies in the field of Earth Sciences and providing students with skills that suit the job market alongside the Kingdom's Vision 2030, via workshops and seminars that meet global and local standards.",
+          "nav.service": "Service",
           "talks.title": "Talks, Seminars & Workshops",
           "talks.desc":
             "Invited talks, seminars, and professional development workshops at universities and academic events.",
@@ -2873,6 +2950,17 @@
           "teach.dev3Date": "يناير 2026 – جارٍ",
           "teach.dev3Desc":
             "تطوير وتنفيذ مشروع بحثي انطلاقًا من أفكار مستوحاة من مجال التخصص، مع دعم الزمالة بموارد متنوعة وإرشاد أكاديمي لضمان نجاح المشروع البحثي.",
+          "service.title": "الخدمة الأكاديمية والقيادة",
+          "service.desc": "المشاركة مع أعضاء هيئة التدريس والطلاب خارج قاعة الدراسة.",
+          "service.clubName": "النادي الجيولوجي السعودي",
+          "service.clubSub": "كلية علوم الأرض · جامعة الملك عبدالعزيز",
+          "service.clubRole": "المؤسس والرئيس",
+          "service.clubPeriod": "2023 – 2025",
+          "service.missionLabel": "الرسالة",
+          "service.missionText": "يسعى النادي الجيولوجي السعودي إلى تعزيز وتطوير مهارات الأعضاء المهتمين بعلوم الأرض المختلفة، من خلال سلسلة من ورش العمل والندوات المبنية وفق المعايير المحلية والدولية.",
+          "service.visionLabel": "الرؤية",
+          "service.visionText": "يهدف النادي الجيولوجي السعودي إلى أن يكون في طليعة الأندية الطلابية في تأهيل الكفاءات الوطنية في مجال علوم الأرض، وتزويد الطلاب بالمهارات المطلوبة في سوق العمل بما يتوافق مع رؤية المملكة، وذلك من خلال ورش عمل وندوات تلبي المعايير العالمية والمحلية.",
+          "nav.service": "الخدمة",
           "talks.title": "المحاضرات والندوات وورش العمل",
           "talks.desc":
             "المحاضرات والندوات العلمية وورش العمل المهنية في الجامعات والفعاليات الأكاديمية.",
